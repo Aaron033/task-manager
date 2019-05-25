@@ -19,17 +19,37 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     }
     // Client.db is the name of the db you trying to manipulate 
     const db = client.db(databaseName) // It gives you back a database reference; typically store in verbal called db
-//Users it will show in the task-manager database in the Robo 3T collections folder 
-    db.collection('users').insertOne({
-  name: "Aaron", 
-  age: 25
-    }, (error, result) =>{
-        if(error) {
-            return console.log('Unabel to insert user')
-        }
-        //This code prints out an array of documents 
-        console.log(result.ops)
-    })
 
+//The code below is to insert a single document(user)
+
+// //Users it will show in the task-manager database in the Robo 3T collections folder 
+//     db.collection('users').insertOne({
+//   name: "Aaron", 
+//   age: 25
+//     }, (error, result) =>{
+//         if(error) {
+//             return console.log('Unabel to insert user')
+//         }
+//         //This code prints out an array of documents 
+//         console.log(result.ops)
+//     })
+
+//The code below is to insert many documents(users)
+
+//See documentation "Node.js MongoDB Driver API"
+//insertMany is one of the options 
+db.collection('users').insertMany([
+{ 
+ name: 'Natasha', 
+ age: 24
+}, 
+{
+name: 'Liliana', 
+age: 33
+}
+
+], () =>{
+    
+} )
 
 })
