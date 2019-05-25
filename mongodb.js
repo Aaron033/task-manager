@@ -38,18 +38,38 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 
 //See documentation "Node.js MongoDB Driver API"
 //insertMany is one of the options 
-db.collection('users').insertMany([
-{ 
- name: 'Natasha', 
- age: 24
-}, 
-{
-name: 'Liliana', 
-age: 33
-}
+// db.collection('users').insertMany([
+// { 
+//  name: 'Natasha', 
+//  age: 24
+// }, 
+// {
+// name: 'Liliana', 
+// age: 33
+// }
 
-], () =>{
-    
-} )
+// ], (error, result) =>{
+//     if(error){
+// return console.log('Unable to insert documents!')
+//     }
+//     console.log(result.ops)
+// })
 
+db.collection('tasks').insertMany([
+    {
+        description: 'Go to Gym', 
+        completed: true
+    }, {
+        description: 'Cancell insurance', 
+        completed: false
+    }, {
+        description: 'fix car', 
+        completed: false
+    }
+] ,(error, result) =>{
+        if(error){
+    return console.log('Unable to insert documents!')
+        }
+        console.log(result.ops)
+})
 })
