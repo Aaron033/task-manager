@@ -6,6 +6,7 @@ const mongodb = require('mongodb')
 // Initialize the connection 
 const MongoClient = mongodb.MongoClient
 //MongoClient give us the necessary access to create  CRUD 
+const ObjectID = monogodb.ObjectID // This is called destructuring 
 
 // We are using mongodb terminology 
 const connectionURL = 'mongodb://127.0.0.1:27017'
@@ -55,21 +56,21 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 //     console.log(result.ops)
 // })
 
-db.collection('tasks').insertMany([
-    {
-        description: 'Go to Gym', 
-        completed: true
-    }, {
-        description: 'Cancell insurance', 
-        completed: false
-    }, {
-        description: 'fix car', 
-        completed: false
-    }
-] ,(error, result) =>{
-        if(error){
-    return console.log('Unable to insert documents!')
-        }
-        console.log(result.ops)
-})
+// db.collection('tasks').insertMany([
+//     {
+//         description: 'Go to Gym', 
+//         completed: true
+//     }, {
+//         description: 'Cancell insurance', 
+//         completed: false
+//     }, {
+//         description: 'fix car', 
+//         completed: false
+//     }
+// ] ,(error, result) =>{
+//         if(error){
+//     return console.log('Unable to insert documents!')
+//         }
+//         console.log(result.ops)
+// })
 })
