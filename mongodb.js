@@ -22,4 +22,10 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
         }
         console.log(user)
     } )
+    //toArray is the callback and it is founded in collection/find/return(cursor)
+    //Cursor is a pointer to data and has too many method and one of them is toArray 
+db.collection('users').find({age:25}).toArray((error, users) => {
+    console.log(users)
+})
+
 })
