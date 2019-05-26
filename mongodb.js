@@ -14,9 +14,12 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     // Client.db is the name of the db you trying to manipulate 
     const db = client.db(databaseName) // It gives you back a database reference; typically store in verbal called db
 //The user is just a function argument
-    db.collection('users').findOne({name: 'Natasha'}, (error, user) =>{ 
+
+// This code needs a ObjectID functionality 
+    db.collection('users').findOne({_id: new ObjectID( "5ce9663b8fe4e5adf5cc323f")}, (error, user) =>{ 
         if(error){
-            return console.log()
+            return console.log('Unable to fetch')
         }
+        console.log(user)
     } )
 })

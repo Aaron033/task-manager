@@ -81,3 +81,11 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 //         console.log(result.ops)
 // })
 })
+ 
+//This is how you look for a collection
+// db.collection('users').findOne({name: 'Natasha'}, (error, user) =>{ 
+//     if(error){
+//         return console.log('Unable to fetch')
+//     }
+//     console.log(user)
+// } )
