@@ -1,22 +1,9 @@
 //CRUD create read update delete
-
-
-
-// const mongodb = require('mongodb')
-// Initialize the connection 
-// const MongoClient = mongodb.MongoClient
-// //MongoClient give us the necessary access to create  CRUD 
-// const ObjectID = monogodb.ObjectID // This is called destructuring 
 const { MongoClient, ObjectID} = require('mongodb')
 
-// We are using mongodb terminology 
+
 const connectionURL = 'mongodb://127.0.0.1:27017'
 const databaseName = 'task-manager' //This will show as a database in the Robo 3T
-
-// const id = new ObjectID()
-// console.log(id)
-// console.log(id.getTimestamp())
-console.log()
 
 MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) => {
     //This is a Asyncrones method 
