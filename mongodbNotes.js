@@ -107,5 +107,12 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     // db.collection('users').find({age: 25}).count((error, count) => {
     //     console.log(count)
     // })
-    
+
+    // db.collection('tasks').findOne({_id: new ObjectID("5ce96ac3c274a3b44106fe22")}, (error, user) =>{
+//     if(error){
+//         return console.log('Unable to find the username')
+//     }
+//     console.log(user)
+// } )
+
 // } )

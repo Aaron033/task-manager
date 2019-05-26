@@ -15,16 +15,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     const db = client.db(databaseName) // It gives you back a database reference; typically store in verbal called db
 //The user is just a function argument
 
-
-
-db.collection('tasks').findOne({_id: new ObjectID("5ce96ac3c274a3b44106fe22")}, (error, user) =>{
-    if(error){
-        return console.log('Unable to find the username')
-    }
-    console.log(user)
-} )
-
-db.collection('tasks').find({completed: true}).toArray((error, done) =>{
+db.collection('tasks').find({completed: false }).toArray((error, done) =>{
 console.log(done)
 })
 
