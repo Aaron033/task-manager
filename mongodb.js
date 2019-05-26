@@ -13,9 +13,10 @@ const { MongoClient, ObjectID} = require('mongodb')
 const connectionURL = 'mongodb://127.0.0.1:27017'
 const databaseName = 'task-manager' //This will show as a database in the Robo 3T
 
-const id = new ObjectID()
-console.log(id)
-console.log(id.getTimestamp())
+// const id = new ObjectID()
+// console.log(id)
+// console.log(id.getTimestamp())
+console.log()
 
 MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) => {
     //This is a Asyncrones method 
@@ -29,16 +30,17 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 //The code below is to insert a single document(user)
 
 // //Users it will show in the task-manager database in the Robo 3T collections folder 
-//     db.collection('users').insertOne({
-//   name: "Aaron", 
-//   age: 25
-//     }, (error, result) =>{
-//         if(error) {
-//             return console.log('Unabel to insert user')
-//         }
-//         //This code prints out an array of documents 
-//         console.log(result.ops)
-//     })
+    db.collection('users').insertOne({
+        _id: id,
+  name: "Victoria", 
+  age: 23
+    }, (error, result) =>{
+        if(error) {
+            return console.log('Unabel to insert user')
+        }
+        //This code prints out an array of documents 
+        console.log(result.ops)
+    })
 
 //The code below is to insert many documents(users)
 
