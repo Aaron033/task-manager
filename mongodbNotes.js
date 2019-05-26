@@ -88,4 +88,24 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 //         return console.log('Unable to fetch')
 //     }
 //     console.log(user)
+
+
+// This code needs a ObjectID functionality 
+    // db.collection('users').findOne({_id: new ObjectID( "5ce9663b8fe4e5adf5cc323f")}, (error, user) =>{ 
+    //     if(error){
+    //         return console.log('Unable to fetch')
+    //     }
+    //     console.log(user)
+    // } )
+    //toArray is the callback and it is founded in collection/find/return(cursor)
+    //Cursor is a pointer to data and has too many method and one of them is toArray 
+
+    // db.collection('users').find({age: 25}).toArray((error, users) => {
+    //     console.log(users)
+    // })
+    
+    // db.collection('users').find({age: 25}).count((error, count) => {
+    //     console.log(count)
+    // })
+    
 // } )
