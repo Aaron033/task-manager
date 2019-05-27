@@ -1,12 +1,16 @@
+import { rejects } from "assert";
+
 // Promeses takes an argument and that argument is a function in this case we 
 // can use an arrow function
-const doWorkPromise = new Promise(() =>{
+const doWorkPromise = new Promise((resolve, reject) =>{
 
 
     //This is a asyncrones process 
     setTimeout(() =>{
 
-  resolve([4.3,23,2341,23])
+//   resolve([4.3,23,2341,23])
+
+reject('Things went wrong')
 
     }, 2000)
 
@@ -14,4 +18,6 @@ const doWorkPromise = new Promise(() =>{
 
 doWorkPromise.then((result) =>{ 
     console.log('Success!', result)
+}).catch((error) =>{
+    console.log("Error", error)
 })
