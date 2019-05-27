@@ -154,4 +154,17 @@ console.log(result)
 }).catch((error) => {
 console.log(error)
 }) 
+
+//The code below is to upadate a document 
+db.collection('tasks').updateMany({
+    completed: false
+}, {
+    $set: {
+        completed: true
+    }
+}).then((result) =>{
+ console.log(result.modifiedCount)
+}).catch((error) => {
+    console.log(error)
+})
 // } )

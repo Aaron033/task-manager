@@ -15,15 +15,4 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     const db = client.db(databaseName) // It gives you back a database reference; typically store in verbal called db
 //The user is just a function argument
 
-db.collection('tasks').updateMany({
-    completed: false
-}, {
-    $set: {
-        completed: true
-    }
-}).then((result) =>{
-
-}).catch((error) => {
-    console.log(error)
-})
 })
