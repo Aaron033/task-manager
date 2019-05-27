@@ -15,19 +15,5 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     const db = client.db(databaseName) // It gives you back a database reference; typically store in verbal called db
 //The user is just a function argument
 
-const updatePromise = db.collection('users').updateOne({
-    _id: new ObjectID("5ce95f055940eda354e18c82")
-},{
-    //We define object operators 
-    $set: {
-        name: 'Selina'
-    }
-})
-
-updatePromise.then((result) => {
-console.log(result)
-}).catch((error) => {
-console.log(error)
-})
 
 })
