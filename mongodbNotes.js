@@ -115,4 +115,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 //     console.log(user)
 // } )
 
+
+ //This code is to find a taks with a specific property in the collecttions doc
+// db.collection('tasks').find({completed: false }).toArray((error, done) =>{
+// console.log(done)
+// })
 // } )
