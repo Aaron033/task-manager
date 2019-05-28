@@ -167,4 +167,22 @@ db.collection('tasks').updateMany({
 }).catch((error) => {
     console.log(error)
 })
+
+//The code below is to delete users with a speficied propertie 
+db.collection('users').deleteMany({
+    //We assume that we deleting any one that matchs the criteria
+    age: 25
+}).then((result) =>{ 
+    console.log(result)
+}).catch((error) =>{ 
+    console.log(error)
+})
+
+db.collection('tasks').deleteOne({
+    description: "fix car"
+}).then((result) =>{
+    console.log(result)
+}).catch((error) =>{ 
+    console.log(error)
+})
 // } )
