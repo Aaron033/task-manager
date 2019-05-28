@@ -15,4 +15,12 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     const db = client.db(databaseName) // It gives you back a database reference; typically store in verbal called db
 //The user is just a function argument
 
+db.collection('users').deleteMany({
+    //We assume that we deleting any one that matchs the criteria
+    age: 25
+}).then((result) =>{ 
+    console.log(result)
+}).catch((error) =>{ 
+    console.log(error)
+})
 })
