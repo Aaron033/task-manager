@@ -20,7 +20,7 @@ const User = mongoose.model('User', {
     }
 } )
 
-
+//We define the second model that will appear in the collection section 
 const Task = mongoose.model('Task', {
     taskName:{
         type: String
@@ -30,13 +30,3 @@ const Task = mongoose.model('Task', {
     }
 })
 
-const newTask = new Task ({
-    taskName : "Do lanudry", 
-    completed: false
-})
-
-newTask.save().then(() => {
-    console.log(newTask)
-}).catch((error) =>{ 
-    console.log('Error', error)
-}) 

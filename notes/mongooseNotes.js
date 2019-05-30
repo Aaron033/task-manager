@@ -11,3 +11,14 @@ me.save().then(() => {
 }).catch((error) => {
     console.log('Error!', error)
 })
+
+const newTask = new Task ({
+    taskName : "Do lanudry", 
+    completed: false
+})
+
+newTask.save().then(() => {
+    console.log(newTask)
+}).catch((error) =>{ 
+    console.log('Error', error)
+}) 
