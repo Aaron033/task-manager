@@ -19,3 +19,24 @@ const User = mongoose.model('User', {
 
     }
 } )
+
+
+const Task = mongoose.model('Task', {
+    taskName:{
+        type: String
+    }, 
+    completed: {
+        type: Boolean
+    }
+})
+
+const newTask = new Task ({
+    taskName : "Do lanudry", 
+    completed: false
+})
+
+newTask.save().then(() => {
+    console.log(newTask)
+}).catch((error) =>{ 
+    console.log('Error', error)
+}) 
