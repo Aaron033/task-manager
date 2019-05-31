@@ -21,9 +21,9 @@ const User = mongoose.model('User', {
       type: String, 
       required: true,
       validate(value){
-          //We are going to use the validator library 
+          //We are going to use the validator library  and we are going to pass the value passed
           if(!validator.isEmail(value)){
-              
+
   throw new Error ('Email is invalid')
           }
       }
@@ -40,6 +40,19 @@ const User = mongoose.model('User', {
     }
 } )
 
+
+const me = new User ({
+    name: 'Leticia', 
+    email: "leticia@"
+
+})
+
+me.save().then(() => {
+    console.log(me)
+
+}).catch((error) => {
+    console.log('Error!', error)
+})
 //We define the second model that will appear in the collection section 
 const Task = mongoose.model('Task', {
     taskName:{
