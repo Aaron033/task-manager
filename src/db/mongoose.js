@@ -45,19 +45,7 @@ const User = mongoose.model('User', {
 } )
 
 
-const me = new User ({
-    name: 'Aaron   ', 
-email: 'Aaron@botello.com ', 
-    age: 25
 
-})
-
-me.save().then(() => {
-    console.log(me)
-
-}).catch((error) => {
-    console.log('Error!', error)
-})
 
 //We define the second model that will appear in the collection section 
 const Task = mongoose.model('Task', {
