@@ -14,7 +14,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
 const User = mongoose.model('User', {
     name: {
     type: String,
-    require: true
+    require: true, 
+    trim: true
 
     }, 
     email: {
@@ -41,18 +42,6 @@ const User = mongoose.model('User', {
 } )
 
 
-const me = new User ({
-    name: 'Leticia', 
-    email: "leticia@"
-
-})
-
-me.save().then(() => {
-    console.log(me)
-
-}).catch((error) => {
-    console.log('Error!', error)
-})
 //We define the second model that will appear in the collection section 
 const Task = mongoose.model('Task', {
     taskName:{
