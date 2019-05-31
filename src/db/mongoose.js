@@ -21,6 +21,8 @@ const User = mongoose.model('User', {
     email: {
       type: String, 
       required: true,
+      trim: true, 
+      lowercase: true,
       validate(value){
           //We are going to use the validator library  and we are going to pass the value passed
           if(!validator.isEmail(value)){
@@ -32,6 +34,7 @@ const User = mongoose.model('User', {
 
     age: {
     type: Number,
+    default: 0, 
     validate(value){
         if(value < 0){
             throw new Error('Age must be a positive number')
