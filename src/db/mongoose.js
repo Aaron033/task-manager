@@ -89,6 +89,8 @@ const Task = mongoose.model('Task', {
 // })
 
 // 201 means a resource was created 
+// http methos are POST, GET, PATCH ,DELETE 
+//POST means that we want to create a new resource 
 
 const newTask = new Task ({
     description : "limpia", 
