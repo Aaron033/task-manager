@@ -2,7 +2,9 @@
 //We are creating instances of the model User  constructor function 
 const me = new User ({
     name: 'Aaron', 
-    age: 25
+    email:'hello@houston.com',
+    age: 25, 
+    password: 'cat525200!'
 })
 
 me.save().then(() => {
