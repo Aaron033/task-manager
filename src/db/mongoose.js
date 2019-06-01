@@ -88,11 +88,11 @@ const Task = mongoose.model('Task', {
 //     console.log('Error!', error)
 // })
 
-
+// 201 means a resource was created 
 
 const newTask = new Task ({
-    description : "Do lanudry", 
-    completed: true
+    description : "limpia", 
+   
 })
 
 newTask.save().then(() => {
