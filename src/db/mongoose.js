@@ -3,11 +3,11 @@ const validator = require('validator')
 // Validator to check emails, credit cards, etc. 
 
 
-//Mongose data is going to look different 
+//Mongoose collection is written different from mongodb 
 mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
 
   useNewUrlParser: true, 
-  //It allows mongoose to  working with mongodb to create indexes and access the data we need to access 
+  //It allows mongoose to work with mongodb to create indexes and allows the access to the data we need to connect to  
   useCreateIndex: true
 })
 
@@ -30,7 +30,7 @@ const User = mongoose.model('User', {
       trim: true, 
       lowercase: true,
       validate(value){
-          //We are going to use the validator library  and we are going to pass the value passed
+          //We are going to use the validator library  and we are going to pass the value entered
           if(!validator.isEmail(value)){
 
   throw new Error ('Email is invalid')
