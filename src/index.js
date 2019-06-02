@@ -86,6 +86,18 @@ app.get('/tasks', (req, res) => {
 
 //This code gets a single task name 
 
+app.get('/tasks/:id', (req, res) =>{
+    const _id = req.params.id
+  //Task model
+    Task.findById(_id).then((task) => {
+        if(!task){
+            return res.status(404).send()
+        }
+        res.send(task)
+    }).catch((e) => {
+        res.status(500).send()
+    })
+})
 
 //Task collection code ends 
 //********************************************************************************************* */

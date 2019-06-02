@@ -21,3 +21,14 @@ doWorkPromise.then((result) =>{
 }).catch((error) =>{
     console.log("Error", error)
 })
+
+
+const add = (a,b) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(a + b)
+        }, 2000)
+    })
+}
+
+//Now we are calling the add function 
