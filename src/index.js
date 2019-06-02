@@ -23,7 +23,7 @@ app.post('/users', (req, res) => {
        res.status(400).send(e)
    })
 })
-
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 app.get('/users', (req, res) => {
     User.find({}).then((users) => {
         res.send(users)
@@ -33,10 +33,26 @@ app.get('/users', (req, res) => {
     })
 })
 
+// expresss gives us access to routes parameters 
+//:id, could be any name
+app.get('/users/:id',(req, res) =>{
+    //The req.params is the values after users/:id http request
+   const _id = req.params.id
+   //The params.id matches with :id 
+   
+   User.findById(_id).then((user) => {
+   if(!user) {
+       return res.status(404).send()
+   }
+   }).catch((e) => {
+
+   })
+
+} )
 
 
 //User collection code ends 
-//********************************************************************************************* */
+
 //********************************************************************************************* */
 
 //Task collection code begins  
