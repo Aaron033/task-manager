@@ -22,7 +22,7 @@ doWorkPromise.then((result) =>{
     console.log("Error", error)
 })
 
-
+//Asycrones operation 
 const add = (a,b) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -32,3 +32,14 @@ const add = (a,b) => {
 }
 
 //Now we are calling the add function 
+
+add(1,2).then((sum) =>{
+  console.log(sum) 
+  add(sum, 5).then((sum2) => {
+      console.log(sum2)
+  }).catch((e) => {
+      console.log(e)
+  })
+}).catch((e) => {
+    console.log(e)
+})
