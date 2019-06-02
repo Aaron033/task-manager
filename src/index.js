@@ -2,17 +2,11 @@ const express = require('express')
 const User = require('./models/user')
 const Task = require('./models/task')
 require('./db/mongoose')
-
+const app = express()
 //It is not going to grab anything from the file; it just going to ensure 
 //That mongoose connects to the data base
-
-
-
-
-const app = express()
 //The code below is needed in order to develop the app in heroku 
 const port = process.env.PORT || 3000 
-
 app.use(express.json())
 
 //in order to access a http page we must use an http functionality 
@@ -27,6 +21,15 @@ app.post('/users', (req, res) => {
    })
 })
 //The first argument is the path and the second is the callback
+//The tasks arguments comes from the Robo 3T collection 
+app.post('/tasks', (req, res) => {
+    const task = new Task(req.body)
+    task.save().then(() =>{
+        res.send(task)
+    }).catch((e) => {
+        res.status(400).send(e)
+    })
+})
 
 
 app.listen(port, () => { 
