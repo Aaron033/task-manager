@@ -1,8 +1,12 @@
 const express = require('express')
+const User = require('./models/user')
+const Task = require('./models/task')
 require('./db/mongoose')
+
 //It is not going to grab anything from the file; it just going to ensure 
 //That mongoose connects to the data base
-const User = require('./models/user')
+
+
 
 
 const app = express()
