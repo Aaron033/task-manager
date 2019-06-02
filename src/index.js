@@ -15,6 +15,12 @@ app.use(express.json())
 app.post('/users', (req, res) => { 
     // now we can create an instance of user
    const user = new User(req.body)
+   user.save().then(() => {
+  res.send(user)
+    //The catch() is to catch any error 
+   }).catch((e) =>{
+       res.status(400).send(e)
+   })
 })
 //The first argument is the path and the second is the callback
 

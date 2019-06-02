@@ -8,23 +8,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
   useCreateIndex: true
 })
 
-
-
-//We define the second model that will appear in the collection section 
-const Task = mongoose.model('Task', {
-    description:{
-        type: String,
-        trim: true, 
-        required: true,
-        
-    }, 
-    completed: {
-        type: Boolean, 
-        default: false
-    }
-})
-
-
 // 201 means a resource was created 
 // http methos are POST, GET, PATCH ,DELETE 
 //POST means that we want to create a new resource 
