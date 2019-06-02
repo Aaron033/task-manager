@@ -33,13 +33,26 @@ const add = (a,b) => {
 
 //Now we are calling the add function 
 
-add(1,2).then((sum) =>{
-  console.log(sum) 
-  add(sum, 5).then((sum2) => {
-      console.log(sum2)
-  }).catch((e) => {
-      console.log(e)
-  })
-}).catch((e) => {
+//One way of doing promises 
+
+// add(1,2).then((sum) =>{
+//   console.log(sum) 
+//   add(sum, 5).then((sum2) => {
+//       console.log(sum2)
+//   }).catch((e) => {
+//       console.log(e)
+//   })
+// }).catch((e) => {
+//     console.log(e)
+// })
+
+//promise chaining 
+
+add(1,2).then((sum) => {
+    console.log(sum)
+    return add(sum, + 4)
+}).then((sum2) => {
+    console.log(sum2)
+}).catch((e) =>{
     console.log(e)
 })
