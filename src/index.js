@@ -24,6 +24,7 @@ app.post('/users', (req, res) => {
    })
 })
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
+//This code is gets all user names 
 app.get('/users', (req, res) => {
     User.find({}).then((users) => {
         res.send(users)
@@ -35,6 +36,7 @@ app.get('/users', (req, res) => {
 
 // expresss gives us access to routes parameters 
 //:id, could be any name
+//This code gets a single user name 
 app.get('/users/:id',(req, res) =>{
     //The req.params is the values after users/:id http request
    const _id = req.params.id
@@ -44,8 +46,10 @@ app.get('/users/:id',(req, res) =>{
    if(!user) {
        return res.status(404).send()
    }
-   }).catch((e) => {
+   res.send(user)
 
+   }).catch((e) => {
+    res.status(500).send()
    })
 
 } )
@@ -68,7 +72,19 @@ app.post('/tasks', (req, res) => {
     })
 })
 
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
+//This code gets all tasks 
+app.get('/tasks', (req, res) => {
+    Task.find({}).then((tasks) => {
 
+        res.send(tasks)
+
+    }).catch((e) =>{ 
+        res.status(500).send(e)
+    })
+})
+
+//This code gets a single task name 
 
 
 //Task collection code ends 
