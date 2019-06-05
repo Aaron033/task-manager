@@ -12,4 +12,6 @@ console.log(user)
 return User.countDocuments({age: 25})
 }).then((result) =>{ 
     console.log(result)
+}).catch((e) =>{
+    console.log(e)
 })
