@@ -12,8 +12,10 @@ const add = (a,b) => {
 const doWork = async () => {
 const sum = await add(1,99)
 
+const sum2 = await add(sum, 50)
+const sum2 = await add(sum2, 3)
     //throw new Error('Somenting went wrong')
-    return sum 
+    return sum3
 }
 
 // console.log(doWork())
