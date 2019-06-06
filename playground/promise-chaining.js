@@ -22,6 +22,16 @@ const updateAgeAndCount = async (id, age) =>{
 //We will need the id and the age that we want to change to 
 const user = await User.findByIdAndUpdate(id, {age})
 //We are setting the property to a variable in age (age: age) 
-// We can use a short hand by just using age
+// We can use a short hand by just using age (ES6 sintax)
+const count = await User.countDocuments({age})
+//The code above count the documents with a specific age 
+return count
+
 
 }
+
+updateAgeAndCount('5cf2f2ece1cf6677b43a6cd5', 34).then((count) => {
+    console.log(count)
+}).catch((e) => {
+    console.log(e)
+})
