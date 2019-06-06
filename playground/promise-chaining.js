@@ -16,3 +16,8 @@ return User.countDocuments({age: 25})
 }).catch((e) =>{
     console.log(e)
 })
+
+//Uing async await functionality 
+const updateAgeAndCount = async () =>{
+    
+}
