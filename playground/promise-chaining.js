@@ -18,6 +18,10 @@ return User.countDocuments({age: 25})
 })
 
 //Uing async await functionality 
-const updateAgeAndCount = async () =>{
-    
+const updateAgeAndCount = async (id, age) =>{
+//We will need the id and the age that we want to change to 
+const user = await User.findByIdAndUpdate(id, {age})
+//We are setting the property to a variable in age (age: age) 
+// We can use a short hand by just using age
+
 }
