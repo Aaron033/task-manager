@@ -13,15 +13,18 @@ app.use(express.json())
 //User collection code begins
 
 //in order to access a http page we must use an http functionality 
-app.post('/users', (req, res) => { 
+app.post('/users', async (req, res) => { 
     // now we can create an instance of user
    const user = new User(req.body)
-   user.save().then(() => {
-  res.status(201).send(user)
-    //The catch() is to catch any error 
-   }).catch((e) =>{
-       res.status(400).send(e)
-   })
+
+   
+
+//    user.save().then(() => {
+//   res.status(201).send(user)
+//     //The catch() is to catch any error 
+//    }).catch((e) =>{
+//        res.status(400).send(e)
+//    })
 })
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 //This code is gets all user names 
