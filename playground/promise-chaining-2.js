@@ -20,4 +20,8 @@ require('../src/db/mongoose')
      return count
  }
 
- deleteTaskAndCount()
+ deleteTaskAndCount('5cf3d4418ab7c4554e74fe89').then((count) =>{
+     console.log(count)
+ }).catch((e) => {
+     console.log(e)
+ })
