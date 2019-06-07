@@ -12,4 +12,12 @@ require('../src/db/mongoose')
      console.log(e)
  })
 
- const deleteTaskAndCount = async (id )
+ const deleteTaskAndCount = async (id) => {
+     const task = await Task.findByIdAndDelete(id)
+
+     const count = await Task.countDocuments({completed:false })
+
+     return count
+ }
+
+ deleteTaskAndCount()
