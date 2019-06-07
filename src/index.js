@@ -17,7 +17,15 @@ app.post('/users', async (req, res) => {
     // now we can create an instance of user
    const user = new User(req.body)
 
-   
+   await  user.save()
+   //Everthing from here is going to run if it is succesfull or not 
+
+   try{ 
+       await user.save()
+res.status(201).send(user)
+   }catch (e){
+       res.status(400).send(e)
+   }
 
 //    user.save().then(() => {
 //   res.status(201).send(user)
