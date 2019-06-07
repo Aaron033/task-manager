@@ -32,6 +32,7 @@ return count
 
 updateAgeAndCount('5cf2f2ece1cf6677b43a6cd5', 34).then((count) => {
     console.log(count)
+    // it shows the count of users that meet the 34 age 
 }).catch((e) => {
     console.log(e)
 })

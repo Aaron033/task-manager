@@ -11,3 +11,5 @@ require('../src/db/mongoose')
  }).catch((e) =>{
      console.log(e)
  })
+
+ const deleteTaskAndCount = async (id )
