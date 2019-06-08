@@ -23,7 +23,7 @@ app.post('/users', async (req, res) => {
    try{ 
        await user.save()
 res.status(201).send(user)
-   }catch (e){
+   } catch (e){
        res.status(400).send(e)
    }
 
@@ -36,7 +36,12 @@ res.status(201).send(user)
 })
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 //This code is gets all user names 
-app.get('/users', (req, res) => {
+app.get('/users', async (req, res) => {
+
+    try {
+        const users = await User.find({})
+        res.send(users) 
+    }
     User.find({}).then((users) => {
         res.send(users)
     }).catch((e) => {
