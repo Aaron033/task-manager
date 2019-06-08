@@ -75,6 +75,11 @@ app.get('/users/:id', async (req, res) =>{
 try {
     //User.findbyId comes from mongoose 
     const user = await User.findById(_id)
+    //Checking for user aviability 
+    if(!user){
+        return res.status(404).send()
+    }
+    //If there is user we will send it 
     res.send(user)
 
 }catch(e){
