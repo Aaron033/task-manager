@@ -73,7 +73,8 @@ app.get('/users/:id', async (req, res) =>{
 //     res.status(500).send()
 //    })
 try {
-    const user = await User.find({})
+    //User.findbyId comes from mongoose 
+    const user = await User.findById(_id)
     res.send(user)
 
 }catch(e){
