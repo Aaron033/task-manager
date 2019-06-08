@@ -37,7 +37,7 @@ res.status(201).send(user)
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 //This code is gets all user names 
 app.get('/users', async (req, res) => {
-
+ 
     try {
         const users = await User.find({})
         res.send(users) 
@@ -47,12 +47,7 @@ app.get('/users', async (req, res) => {
     }
 
 
-    // User.find({}).then((users) => {
-    //     res.send(users)
-    // }).catch((e) => {
-    //     // 500 database connection failed
-    //     res.status(500).send(e)
-    // })
+
 })
 
 // expresss gives us access to routes parameters 
@@ -62,16 +57,7 @@ app.get('/users/:id', async (req, res) =>{
     //The req.params is the values after users/:id http request
    const _id = req.params.id
    //The params.id matches with :id 
-   
-//    User.findById(_id).then((user) => {
-//    if(!user) {
-//        return res.status(404).send()
-//    }
-//    res.send(user)
 
-//    }).catch((e) => {
-//     res.status(500).send()
-//    })
 try {
     //User.findbyId comes from mongoose 
     const user = await User.findById(_id)
