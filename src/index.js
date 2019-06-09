@@ -118,7 +118,7 @@ app.get('/tasks/:id', async (req, res) =>{
   //Task model
 try{
  const user = await Task.findById(_id)
-
+//If there is not user 
  if(!user){
      return res.status(404).send()
  }
