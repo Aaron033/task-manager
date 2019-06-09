@@ -74,9 +74,16 @@ app.patch('/users/:id', async (req, res) => {
     try {
 
         //  const _id = req.params.id and req.params.id are the same 
-        const user = await User.findByIdAndUpdate(req.params.id)
-    } catch(e) { 
+        const user = await User.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true  })
+        //It will return the new user inseat of the founded one
 
+        if(!user){
+            return res.status(404).send()
+        }
+
+        res.send(user)
+    } catch(e) { 
+     res.status(400).send(e)
     }
 })
 
