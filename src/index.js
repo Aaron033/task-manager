@@ -69,6 +69,8 @@ try {
 
 
 } )
+//patch() is used for updating a resource 
+app.patch()
 
 
 //User collection code ends 
