@@ -84,7 +84,7 @@ try {
 
 //The first argument is the path and the second is the callback
 //The tasks arguments comes from the Robo 3T collection 
-app.post('/tasks', (req, res) => {
+app.post('/tasks', async (req, res) => {
     const task = new Task(req.body)
     task.save().then(() =>{
         res.status(201).send(task)
@@ -95,7 +95,8 @@ app.post('/tasks', (req, res) => {
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 //This code gets all tasks 
-app.get('/tasks', (req, res) => {
+app.get('/tasks', async  (req, res) => {
+
     Task.find({}).then((tasks) => {
 
         res.send(tasks)
