@@ -86,11 +86,25 @@ try {
 //The tasks arguments comes from the Robo 3T collection 
 app.post('/tasks', async (req, res) => {
     const task = new Task(req.body)
-    task.save().then(() =>{
+  
+
+
+    // task.save().then(() =>{
+    //     res.status(201).send(task)
+    // }).catch((e) => {
+    //     res.status(400).send(e)
+    // })
+
+    await task.save()
+
+    try{
+        await task.save()
         res.status(201).send(task)
-    }).catch((e) => {
+
+    }catch(e)
+    {
         res.status(400).send(e)
-    })
+    }
 })
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
