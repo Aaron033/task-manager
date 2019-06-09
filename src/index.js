@@ -70,7 +70,15 @@ try {
 
 } )
 //patch() is used for updating a resource 
-app.patch()
+app.patch('/users/:id', async (req, res) => {
+    try {
+
+        //  const _id = req.params.id and req.params.id are the same 
+        const user = await User.findByIdAndUpdate(req.params.id)
+    } catch(e) { 
+
+    }
+})
 
 
 //User collection code ends 
