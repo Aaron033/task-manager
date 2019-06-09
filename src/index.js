@@ -43,9 +43,6 @@ app.get('/users', async (req, res) => {
     } catch(e) {
         res.status(500).send()
     }
-
-
-
 })
 
 // expresss gives us access to routes parameters 
@@ -128,7 +125,7 @@ try{
 }
 
 })
-
+//All async code working properly 
 //Task collection code ends 
 //********************************************************************************************* */
 app.listen(port, () => { 
