@@ -12,6 +12,7 @@ app.use(express.json())
 //********************************************************************************************* */
 //User collection code begins
 
+
 //in order to access a http page we must use an http functionality 
 app.post('/users', async (req, res) => { 
     // now we can create an instance of user
@@ -27,13 +28,10 @@ res.status(201).send(user)
        res.status(400).send(e)
    }
 
-//    user.save().then(() => {
-//   res.status(201).send(user)
-//     //The catch() is to catch any error 
-//    }).catch((e) =>{
-//        res.status(400).send(e)
-//    })
+   
 })
+
+
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
 //This code is gets all user names 
 app.get('/users', async (req, res) => {
@@ -104,6 +102,7 @@ app.get('/tasks', async  (req, res) => {
 
     //Finding all task 
     try{
+        //We store all the tasks that we found in the tasks variable 
         const tasks = await Task.find({})
         res.send(tasks)
     }catch(e){
