@@ -102,13 +102,15 @@ app.post('/tasks', async (req, res) => {
 //This code gets all tasks 
 app.get('/tasks', async  (req, res) => {
 
-    Task.find({}).then((tasks) => {
+    //Finding all task 
 
+
+    try{
+        const tasks = await Task.find({})
         res.send(tasks)
-
-    }).catch((e) =>{ 
-        res.status(500).send(e)
-    })
+    }catch(e){
+        res.status(500).send()
+    }
 })
 
 //This code gets a single task name 

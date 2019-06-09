@@ -40,7 +40,7 @@ app.get('/users/:id', async (req, res) =>{
    }).catch((e) => {
     res.status(500).send()
    })
-
+})
    app.get('/users', async (req, res) => {
     User.find({}).then((users) => {
         res.send(users)
@@ -49,7 +49,7 @@ app.get('/users/:id', async (req, res) =>{
         res.status(500).send(e)
     })
 
-
+})
     app.post('/tasks', async (req, res) => {
         const task = new Task(req.body)
       
@@ -60,3 +60,16 @@ app.get('/users/:id', async (req, res) =>{
         // }).catch((e) => {
         //     res.status(400).send(e)
         // })
+    })
+        app.get('/tasks', async  (req, res) => {
+
+            //Finding all task 
+            Task.find({}).then((tasks) => {
+        
+                res.send(tasks)
+        
+            }).catch((e) =>{ 
+                res.status(500).send(e)
+            })
+        })
+        
