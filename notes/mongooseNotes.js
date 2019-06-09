@@ -48,3 +48,15 @@ app.get('/users/:id', async (req, res) =>{
         // 500 database connection failed
         res.status(500).send(e)
     })
+
+
+    app.post('/tasks', async (req, res) => {
+        const task = new Task(req.body)
+      
+    
+    
+        // task.save().then(() =>{
+        //     res.status(201).send(task)
+        // }).catch((e) => {
+        //     res.status(400).send(e)
+        // })
