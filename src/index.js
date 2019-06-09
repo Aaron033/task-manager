@@ -103,8 +103,6 @@ app.post('/tasks', async (req, res) => {
 app.get('/tasks', async  (req, res) => {
 
     //Finding all task 
-
-
     try{
         const tasks = await Task.find({})
         res.send(tasks)
@@ -115,17 +113,21 @@ app.get('/tasks', async  (req, res) => {
 
 //This code gets a single task name 
 
-app.get('/tasks/:id', (req, res) =>{
+app.get('/tasks/:id', async (req, res) =>{
     const _id = req.params.id
   //Task model
-    Task.findById(_id).then((task) => {
-        if(!task){
-            return res.status(404).send()
-        }
-        res.send(task)
-    }).catch((e) => {
-        res.status(500).send()
-    })
+try{
+ const user = await Task.findById(_id)
+
+ if(!user){
+     return res.status(404).send()
+ }
+ res.send(user)
+
+} catch(e){
+    res.status(500).send(e)
+}
+
 })
 
 //Task collection code ends 
