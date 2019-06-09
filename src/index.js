@@ -71,6 +71,9 @@ try {
 } )
 //patch() is used for updating a resource 
 app.patch('/users/:id', async (req, res) => {
+
+    //The allowed properties that are updatble 
+ const allowedUpdates = ['name', 'email', 'password', 'age ']
     try {
 
         //  const _id = req.params.id and req.params.id are the same 
