@@ -82,7 +82,10 @@ app.patch('/users/:id', async (req, res) => {
 const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
  //We check if the update is inclued in allowedUpdates 
     // we check if the individual update is found 
-
+if(!isValidOperation) {
+    //We check if is not an allowed operation 
+    return res.status(400).send({error: 'Invalid update'})
+}
 
     //The allowed properties that are updatble 
  const allowedUpdates = ['name', 'email', 'password', 'age ']
