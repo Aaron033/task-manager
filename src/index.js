@@ -73,12 +73,14 @@ try {
 app.patch('/users/:id', async (req, res) => {
  // To convert an object into an array of its properties 
 
- const updates = object.keys(req.body) //We pass the obejct that we trying to work with 
+    //The allowed properties that are updatble 
+    const allowedUpdates = ['name', 'email', 'password', 'age ']
+    
+ const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
 
- //It would take obecjt in an keys would return an array of strings in which is the property of that object 
+ //It would take object  keys and it would return an array of strings in which is property of that object 
 //every() takes a callback function.
 // every() calls every item in the array 
-//must every() return 
 const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
  //We check if the update is inclued in allowedUpdates 
     // we check if the individual update is found 
@@ -87,8 +89,7 @@ if(!isValidOperation) {
     return res.status(400).send({error: 'Invalid update'})
 }
 
-    //The allowed properties that are updatble 
- const allowedUpdates = ['name', 'email', 'password', 'age ']
+ 
     try {
 
         //  const _id = req.params.id and req.params.id are the same 
