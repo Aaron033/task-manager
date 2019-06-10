@@ -89,3 +89,10 @@ app.get('/tasks/:id', async (req, res) =>{
     // })
 
 })
+
+const isValidOperation = updates.every((update) => {
+    //We check if the update is inclued in allowedUpdates
+       return allowedUpdates.includes(update)
+       // we check if the individual update is found 
+       
+   })
