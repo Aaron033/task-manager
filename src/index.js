@@ -176,8 +176,17 @@ app.patch('/tasks/:id', async(req, res) => {
     }
 
     try {
+        const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidator: true}) 
         
-    }
+        if(!task){
+            return res.status(404).send()
+        }
+
+        res.send(task)
+    } catch(e) { 
+        res.status(400).send(e)
+       }
+
 
 })
 //All async code working properly 
