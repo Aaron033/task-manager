@@ -75,7 +75,7 @@ app.patch('/users/:id', async (req, res) => {
 
     //The allowed properties that are updatble 
     const allowedUpdates = ['name', 'email', 'password', 'age ']
-    
+
  const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
 
  //It would take object  keys and it would return an array of strings in which is property of that object 
@@ -160,6 +160,12 @@ try{
     res.status(500).send(e)
 }
 
+})
+
+
+//Creating a code to update a task uisng pathc
+app.patch('/tasks/:id', async(req, res) => {
+    const allowedUpdates = []
 })
 //All async code working properly 
 //Task collection code ends 
