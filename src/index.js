@@ -169,7 +169,16 @@ app.patch('/tasks/:id', async(req, res) => {
 
     const updates = Object.keys(req.body)
 
-    const isValidOperation = updates.every((update))
+    const isValidOperation = updates.every((update) => { allowedUpdates.includes(update)})
+
+    if(!isValidOperation){
+        return res.status(400).send({error: 'invalid update'})
+    }
+
+    try {
+        
+    }
+
 })
 //All async code working properly 
 //Task collection code ends 
