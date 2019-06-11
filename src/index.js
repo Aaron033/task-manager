@@ -165,7 +165,11 @@ try{
 
 //Creating a code to update a task uisng pathc
 app.patch('/tasks/:id', async(req, res) => {
-    const allowedUpdates = []
+    const allowedUpdates = ['description', 'completed']
+
+    const updates = Object.keys(req.body)
+
+    const isValidOperation = updates.every((update))
 })
 //All async code working properly 
 //Task collection code ends 
