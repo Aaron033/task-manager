@@ -92,9 +92,9 @@ if(!isValidOperation) {
  
     try {
 
-        //  const _id = req.params.id and req.params.id are the same 
+        //  const _id = req.params.id and req.params.id are the same thing 
         const user = await User.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true  })
-        //It will return the new user inseat of the founded one
+        //It will return the new user instead of the founded one
 
         if(!user){
             return res.status(404).send()
@@ -176,6 +176,8 @@ app.patch('/tasks/:id', async(req, res) => {
     }
 
     try {
+        //Fisrt parameter is the thing that we trying to update 
+        // second parameter the updates that we trying to apply on 
         const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidator: true}) 
         
         if(!task){
