@@ -81,7 +81,7 @@ app.patch('/users/:id', async (req, res) => {
  //It would take object  keys and it would return an array of strings in which is property of that object 
 //every() takes a callback function.
 // every() calls every item in the array 
-const isValidOperation = updates.every((update) => {allowedUpdates.includes(update)})
+const isValidOperation = updates.every((update) => { allowedUpdates.includes(update)})
  //We check if the update is inclued in allowedUpdates 
     // we check if the individual update is found 
 if(!isValidOperation) {
@@ -179,7 +179,7 @@ app.patch('/tasks/:id', async (req, res) => {
     try {
         //Fisrt parameter is the thing that we trying to update 
         // second parameter the updates that we trying to apply on 
-        const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidator: true}) 
+        const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true}) 
         
         if(!task){
             return res.status(404).send()
