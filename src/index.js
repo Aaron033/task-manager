@@ -175,7 +175,7 @@ app.patch('/tasks/:id', async (req, res) => {
     if(!isValidOperation){
         return res.status(400).send({error: 'invalid update'})
     }
-//Fisrt parameter is the thing that we trying to update 
+
     try {
         //Fisrt parameter is the thing that we trying to update 
         // second parameter the updates that we trying to apply on 
@@ -187,7 +187,7 @@ app.patch('/tasks/:id', async (req, res) => {
         }
 
         res.send(task)
-        //It would send any errors 
+       
     } catch(e) { 
         res.status(400).send(e)
        }
