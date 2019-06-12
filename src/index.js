@@ -187,6 +187,7 @@ app.patch('/tasks/:id', async (req, res) => {
         }
 
         res.send(task)
+        //It would send any errors 
     } catch(e) { 
         res.status(400).send(e)
        }
