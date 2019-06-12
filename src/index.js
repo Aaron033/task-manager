@@ -81,7 +81,7 @@ app.patch('/users/:id', async (req, res) => {
  //It would take object  keys and it would return an array of strings in which is property of that object 
 //every() takes a callback function.
 // every() calls every item in the array 
-const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
+const isValidOperation = updates.every((update) => {allowedUpdates.includes(update)})
  //We check if the update is inclued in allowedUpdates 
     // we check if the individual update is found 
 if(!isValidOperation) {
@@ -164,7 +164,8 @@ try{
 
 
 //Creating a code to update a task uisng pathc
-app.patch('/tasks/:id', async(req, res) => {
+app.patch('/tasks/:id', async (req, res) => {
+
     const allowedUpdates = ['description', 'completed']
 
     const updates = Object.keys(req.body)
