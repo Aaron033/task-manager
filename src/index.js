@@ -104,12 +104,9 @@ if(!isValidOperation) {
 })
 
 
-//User collection code ends 
+
 
 //********************************************************************************************* */
-
-//Task collection code begins  
-
 //The first argument is the path and the second is the callback
 //The tasks arguments comes from the Robo 3T collection 
 app.post('/tasks', async (req, res) => {
