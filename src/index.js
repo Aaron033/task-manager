@@ -191,11 +191,10 @@ app.patch('/tasks/:id', async (req, res) => {
 
 
 })
-//All async code working properly 
+
 //Task collection code ends 
 //********************************************************************************************* */
 app.listen(port, () => { 
     console.log('Server is up on port ' + port)
 })
 
-//code is not updating 
