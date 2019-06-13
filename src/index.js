@@ -71,13 +71,11 @@ try {
 } )
 //patch() is used for updating a resource 
 app.patch('/users/:id', async (req, res) => {
+    const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
+//The allowed properties that are updatble 
+const allowedUpdates = ['name', 'email', 'password', 'age ']
  // To convert an object into an array of its properties 
-
-    //The allowed properties that are updatble 
-    const allowedUpdates = ['name', 'email', 'password', 'age ']
-
- const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
-
+ 
  //It would take object  keys and it would return an array of strings in which is property of that object 
 //every() takes a callback function.
 // every() calls every item in the array 
