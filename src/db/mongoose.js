@@ -9,6 +9,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
 })
 
 // 201 means a resource was created 
-// http methos are POST, GET, PATCH ,DELETE 
+// http methods are POST, GET, PATCH ,DELETE among many others
 //POST means that we want to create a new resource 
 
