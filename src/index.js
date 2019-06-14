@@ -83,7 +83,7 @@ const isValidOperation = updates.every((update) => { allowedUpdates.includes(upd
     // we check if the individual update is found 
 if(!isValidOperation) {
     //We check if is not an allowed operation 
-    return res.status(400).send({error: 'Invalid update'})
+    return res.status(400).send({ error: 'Invalid update'})
 }
 
  
