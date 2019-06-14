@@ -168,6 +168,7 @@ app.patch('/tasks/:id', async (req, res) => {
 
     if(!isValidOperation){
         return res.status(400).send({error: 'invalid update'})
+        //it is trigging this code ******
     }
 
     try {
