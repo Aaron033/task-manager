@@ -18,7 +18,7 @@ const User = mongoose.model('User', {
         validate(value) {
             //The .includes() returns a true the 'password' is included 
             if(value.toLowerCase().includes('password')){
-                throw new Error('Password can not containt the  word "Password')
+                throw new Error('Password can not containt the  word "Password"')
             }
         }
 
