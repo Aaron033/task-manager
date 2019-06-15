@@ -186,3 +186,11 @@ db.collection('tasks').deleteOne({
     console.log(error)
 })
 // } )
+
+
+
+// 201 means a resource was created 
+// http methods are POST, GET, PATCH ,DELETE among many others
+//POST means that we want to create a new resource 
+
+//needs to restart the data base 
