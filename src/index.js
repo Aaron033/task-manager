@@ -99,6 +99,7 @@ if(!isValidOperation) {
 
         res.send(user)
     } catch(e) { 
+    console.log(e.message)
      res.status(400).send(e)
     }
 })
