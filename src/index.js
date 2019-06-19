@@ -100,6 +100,7 @@ if(!isValidOperation) {
 
         res.send(user)
     } catch(e) { 
+
     console.log(e.message)
      res.status(400).send(e)
     }
@@ -153,6 +154,7 @@ try{
  res.send(task)
 
 } catch(e){
+    console.log(e.message)
     res.status(500).send(e)
 }
 
