@@ -78,7 +78,7 @@ const allowedUpdates = ['name', 'email', 'password', 'age ']
  //It would take object  keys and it would return an array of strings in which is property of that object 
 //every() takes a callback function.
 // every() calls every item in the array 
-const isValidOperation = updates.every((update) => { allowedUpdates.includes(update)})
+const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
  //We check if the update is inclued in allowedUpdates 
     // we check if the individual update is found 
 if(!isValidOperation) {
