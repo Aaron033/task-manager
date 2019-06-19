@@ -79,6 +79,7 @@ const allowedUpdates = ['name', 'email', 'password', 'age ']
 //every() takes a callback function.
 // every() calls every item in the array 
 const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
+//{} finally works 
  //We check if the update is inclued in allowedUpdates 
     // we check if the individual update is found 
 if(!isValidOperation) {
