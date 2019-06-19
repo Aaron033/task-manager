@@ -91,7 +91,7 @@ if(!isValidOperation) {
     try {
 
         //  const _id = req.params.id and req.params.id are the same thing 
-        const user = await User.findByIdAndUpdate(req.params.id, {name: req.body.name}, {new: true, runValidators: true })
+        const user = await User.findByIdAndUpdate(req.params.id, { name: req.body.name }, {new: true, runValidators: true })
         //It will return the new user instead of the founded one
 
         if(!user){
