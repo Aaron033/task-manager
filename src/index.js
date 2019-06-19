@@ -166,7 +166,7 @@ app.patch('/tasks/:id', async (req, res) => {
 
     const updates = Object.keys(req.body)
 
-    const isValidOperation = updates.every((update) => { allowedUpdates.includes(update)})
+    const isValidOperation = updates.every((update) =>  allowedUpdates.includes(update))
 
     if(!isValidOperation){
         return res.status(400).send({error: 'invalid update'})
