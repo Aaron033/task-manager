@@ -104,6 +104,8 @@ if(!isValidOperation) {
     }
 })
 
+app.delete('/users/:id', async ())
+
 //********************************************************************************************* */
 //The first argument is the path and the second is the callback
 //The tasks arguments comes from the Robo 3T collection 
