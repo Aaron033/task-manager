@@ -104,7 +104,14 @@ if(!isValidOperation) {
     }
 })
 
-app.delete('/users/:id', async ())
+app.delete('/users/:id', async (req, res) => {
+    try {
+  const user = await User.findByIdAndDelete(req.params.id)
+  if(!user)
+    }catch(e){
+
+    }
+})
 
 //********************************************************************************************* */
 //The first argument is the path and the second is the callback
