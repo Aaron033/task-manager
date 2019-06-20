@@ -6,8 +6,9 @@ const validator = require('validator')
 const User = mongoose.model('User', {
     name: {
     type: String,
-    require: true, 
-    trim: true
+
+    trim: true,
+    require: true
 
     }, 
     password: {

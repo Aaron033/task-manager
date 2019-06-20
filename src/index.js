@@ -70,11 +70,11 @@ try {
 } )
 //patch() is used for updating a resource 
 app.patch('/users/:id', async (req, res) => {
-    const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
+  
 //The allowed properties that are updatble 
 const allowedUpdates = ['name', 'email', 'password', 'age ']
  // To convert an object into an array of its properties 
- 
+ const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
  //It would take object  keys and it would return an array of strings in which is property of that object 
 //every() takes a callback function.
 // every() calls every item in the array 
@@ -89,7 +89,7 @@ if(!isValidOperation) {
     try {
 
         //  const _id = req.params.id and req.params.id are the same thing 
-        const user = await User.findByIdAndUpdate(req.params.id, { name: req.body.name }, {new: true, runValidators: true })
+        const user = await User.findByIdAndUpdate(req.params.id,  req.body, {new: true, runValidators: true })
         //It will return the new user instead of the founded one
 
         if(!user){
