@@ -86,8 +86,6 @@ if(!isValidOperation) {
     //We check if is not an allowed operation 
     return res.status(400).send({ error: 'Invalid update'})
 }
-
- 
     try {
 
         //  const _id = req.params.id and req.params.id are the same thing 
@@ -105,9 +103,6 @@ if(!isValidOperation) {
      res.status(400).send(e)
     }
 })
-
-
-
 
 //********************************************************************************************* */
 //The first argument is the path and the second is the callback
@@ -188,6 +183,7 @@ app.patch('/tasks/:id', async (req, res) => {
         res.send(task)
        
     } catch(e) { 
+        console.log(e.message)
         res.status(400).send(e)
        }
 
