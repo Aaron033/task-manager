@@ -10,15 +10,8 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 
 
-const router = new express.Router()
 
-router.get('/test' , (req, res) => {
-    res.send('This is from my other router')
-})
 
-//this is how we access the router 
-
-app.use(router)
 //********************************************************************************************* */
 
 
