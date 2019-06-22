@@ -1,10 +1,9 @@
 const express = require('express')
-
-const app = express()
-app.use(express.json())
+const User = require('../models/user')
+const router = new express.Router()
 //We are creating an instance of router using express 
 
-const router = new express.Router()
+
 
 // router.get('/test', (req, res) => {
 //     res.send('From a new file')
