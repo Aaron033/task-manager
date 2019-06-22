@@ -202,6 +202,12 @@ app.patch('/tasks/:id', async (req, res) => {
 
 })
 
+app.delete('/tasks/:id', async (req, res) =>{
+    try{ 
+        const task = await 
+    }
+})
+
 //Task collection code ends 
 //********************************************************************************************* */
 app.listen(port, () => { 
