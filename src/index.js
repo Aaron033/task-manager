@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 
 //********************************************************************************************* */
-//User collection code begins
+
 
 
 //in order to access a http page we must use an http functionality 
