@@ -1,9 +1,10 @@
 const express = require('express')
+
 const app = express()
 app.use(express.json())
 //We are creating an instance of router using express 
 
-// const router = new express.Router()
+const router = new express.Router()
 
 // router.get('/test', (req, res) => {
 //     res.send('From a new file')
@@ -128,4 +129,4 @@ app.post('/tasks', async (req, res) => {
         res.status(400).send(e)
     }
 })
-// module.exports = router 
+module.exports = router 
