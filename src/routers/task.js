@@ -4,7 +4,7 @@ const router = new express.Router()
 
 
 //This code gets all tasks 
-app.get('/tasks', async  (req, res) => {
+router.get('/tasks', async  (req, res) => {
 
     //Finding all task 
     try{
@@ -18,7 +18,7 @@ app.get('/tasks', async  (req, res) => {
 
 //This code gets a single task name 
 
-app.get('/tasks/:id', async (req, res) =>{
+router.get('/tasks/:id', async (req, res) =>{
     const _id = req.params.id
   //Task model
 try{
@@ -38,7 +38,7 @@ try{
 
 
 //Creating a code to update a task uisng pathc
-app.patch('/tasks/:id', async (req, res) => {
+router.patch('/tasks/:id', async (req, res) => {
 
     const allowedUpdates = ['description', 'completed']
 
