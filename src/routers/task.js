@@ -71,7 +71,7 @@ router.patch('/tasks/:id', async (req, res) => {
 
 })
 
-app.delete('/tasks/:id', async (req, res) =>{
+router.delete('/tasks/:id', async (req, res) =>{
     try{ 
         const task = await Task.findByIdAndDelete(req.params.id)
 
