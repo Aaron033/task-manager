@@ -1,5 +1,5 @@
 const express = require('express')
-const User = require('../models/task')
+const Task = require('../models/task')
 const router = new express.Router()
 
 
