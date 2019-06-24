@@ -41,6 +41,7 @@ router.get('/users', async (req, res) => {
 
 // expresss gives us access to routes parameters 
 //:id, could be any name
+
 //This code gets a single user name 
 router.get('/users/:id', async (req, res) =>{
     //The req.params is the values after users/:id http request
