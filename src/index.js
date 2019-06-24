@@ -1,9 +1,10 @@
 const express = require('express')
-const User = require('./models/user')
-const Task = require('./models/task')
+require('./db/mongoose')
+// const User = require('./models/user')
+// const Task = require('./models/task')
 const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
-require('./db/mongoose')
+
 
 const app = express()
 //It is not going to grab anything from the file; it just going to ensure 

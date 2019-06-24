@@ -3,6 +3,19 @@ const Task = require('../models/task')
 const router = new express.Router()
 
 
+router.post('/tasks', async (req, res) => { 
+    // now we can create an instance of user
+   const task = new Task(req.body)
+   //Everthing from here is going to run if it is succesfull or not 
+   try{ 
+       await task.save()
+res.status(201).send(task)
+   } catch (e){
+       res.status(400).send(e)
+   }
+
+   
+})
 //This code gets all tasks 
 router.get('/tasks', async  (req, res) => {
 
@@ -37,7 +50,7 @@ try{
 })
 
 
-//Creating a code to update a task uisng pathc
+//Creating a code to update a task uisng path
 router.patch('/tasks/:id', async (req, res) => {
 
     const allowedUpdates = ['description', 'completed']
