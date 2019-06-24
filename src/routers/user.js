@@ -10,8 +10,6 @@ const router = new express.Router()
 //     res.send('From a new file')
 // })
 
-
-
 //in order to access a http page we must use an http functionality 
 router.post('/users', async (req, res) => { 
     // now we can create an instance of user
