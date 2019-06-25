@@ -51,6 +51,7 @@ const userSchema = new mongoose.Schema(
     } )
 
 
+userSchema.pre()
 
 const User = mongoose.model('User', userSchema)
 
