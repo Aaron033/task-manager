@@ -82,7 +82,8 @@ if(!isValidOperation) {
     return res.status(400).send({ error: 'Invalid update'})
 }
     try {
-
+        //mongoose queries bypass more advance features like middlewarer 
+      
         //  const _id = req.params.id and req.params.id are the same thing 
         const user = await User.findByIdAndUpdate(req.params.id,  req.body, {new: true, runValidators: true })
         //It will return the new user instead of the founded one
