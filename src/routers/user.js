@@ -88,7 +88,7 @@ if(!isValidOperation) {
      
       updates.forEach((update) => { 
           //Accesing the propierty dinamically 
-  user[update]
+        user[update] = req.body[update]
 
       })
       
