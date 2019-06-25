@@ -52,8 +52,9 @@ const userSchema = new mongoose.Schema(
 
 // The second argument must be a standard function 
 // beacuse arrow functions does not work with 
-userSchema.pre('save', function() { 
-    
+userSchema.pre('save', async function(next) { 
+    // the function of next is to run a code before a user is saved 
+  const user = this 
 })
 
 const User = mongoose.model('User', userSchema)
