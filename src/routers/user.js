@@ -59,10 +59,9 @@ try {
     res.send(user)
 
 }catch(e){
+    console.log(e.message)
     res.status(500).send()
 }
-
-
 } )
 //patch() is used for updating a resource 
 router.patch('/users/:id', async (req, res) => {
@@ -112,20 +111,5 @@ res.status(500).send()
     }
 })
 
-//********************************************************************************************* */
-//The first argument is the path and the second is the callback
-//The tasks arguments comes from the Robo 3T collection 
-router.post('/tasks', async (req, res) => {
-    const task = new Task(req.body)
-    await task.save()
 
-    try{
-        await task.save()
-        res.status(201).send(task)
-
-    }catch(e)
-    {
-        res.status(400).send(e)
-    }
-})
 module.exports = router 
