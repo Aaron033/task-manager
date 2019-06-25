@@ -16,10 +16,18 @@ app.use(userRouter)
 app.use(taskRouter)
 
 
-
+const bcrypt = require('bcryptjs')
 
 //********************************************************************************************* */
 const myfunction = async () => {
+    //the password is what the user provide us 
+const password = "red1243!"
+
+//The first argument is the plain text 
+//The second argument is the number or rounds its how many times the algorithm is executed 
+const hashedPassword = await bcrypt.hash(password, )
+
+
 
 }
 
