@@ -24,9 +24,11 @@ const myfunction = async () => {
 const password = "red1243!"
 
 //The first argument is the plain text 
-//The second argument is the number or rounds its how many times the algorithm is executed 
-const hashedPassword = await bcrypt.hash(password, )
+//The second argument is the number or rounds its how many times the algorithm is executed not too few; easy to crack.Not too many; long process 
+const hashedPassword = await bcrypt.hash(password, 8 )
 
+console.log(password)
+console.log(hashedPassword)
 
 
 }
