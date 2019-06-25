@@ -65,14 +65,15 @@ try {
 } )
 //patch() is used for updating a resource 
 router.patch('/users/:id', async (req, res) => {
-  
+    const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
+    //It would take object  keys and it would return an array of strings in which is property of that object 
+   //every() takes a callback function.
+   // every() calls every item in the array 
+
 //The allowed properties that are updatble 
 const allowedUpdates = ['name', 'email', 'password', 'age ']
  // To convert an object into an array of its properties 
- const updates = Object.keys(req.body) //We pass the obejct that we trying to work with 
- //It would take object  keys and it would return an array of strings in which is property of that object 
-//every() takes a callback function.
-// every() calls every item in the array 
+
 const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
 //{} finally works 
  //We check if the update is inclued in allowedUpdates 
@@ -83,9 +84,16 @@ if(!isValidOperation) {
 }
     try {
         //mongoose queries bypass more advance features like middlewarer 
+      const user = await User.findById(req.params.id)
+     
+      updates.forEach((update) => { 
+          //Accesing the propierty dinamically 
+  user[update]
+
+      })
       
         //  const _id = req.params.id and req.params.id are the same thing 
-        const user = await User.findByIdAndUpdate(req.params.id,  req.body, {new: true, runValidators: true })
+       // const user = await User.findByIdAndUpdate(req.params.id,  req.body, {new: true, runValidators: true })
         //It will return the new user instead of the founded one
 
         if(!user){
