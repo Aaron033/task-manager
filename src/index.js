@@ -31,6 +31,9 @@ console.log(password)
 console.log(hashedPassword)
 
 
+const isMatch = await bcrypt.compare('Red12345', hashedPassword)
+
+console.log(isMatch)
 }
 
 myfunction()
