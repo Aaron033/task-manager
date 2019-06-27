@@ -59,9 +59,13 @@ userSchema.pre('save', async function(next) {
 //   console.log('Just before saving')
 //   next()
 
-if() { 
-    
+if(user.isModified(password)) { 
+
+
+
 }
+
+next()
 })
 
 
