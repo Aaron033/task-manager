@@ -56,8 +56,12 @@ userSchema.pre('save', async function(next) {
     //exapmles of pre functionality , before validator or before saving  
     // the function of next is to run a code before a user is saved 
   const user = this 
-  console.log('Just before saving')
-  next()
+//   console.log('Just before saving')
+//   next()
+
+if() { 
+    
+}
 })
 
 
