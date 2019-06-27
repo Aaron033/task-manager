@@ -84,9 +84,9 @@ if(!isValidOperation) {
 }
     try {
         //mongoose queries bypass more advance features like middlewarer 
-      const user = await User.findByIdAndUpdate(req.params.id)
+      const user = await User.findById(req.params.id)
      
-      updates.forEach((update) =>       user[update] = req.body[update])
+      updates.forEach((update) =>     user[update] = req.body[update])
           //Accesing the propierty dinamically 
   
           await user.save()
