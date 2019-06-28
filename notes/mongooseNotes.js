@@ -106,7 +106,7 @@ router.get('/test' , (req, res) => {
 
 //this is how we access the router 
 app.use(router)
-//********************************************************************************************* */
+
 //The first argument is the path and the second is the callback
 //The tasks arguments comes from the Robo 3T collection 
 router.post('/tasks', async (req, res) => {
@@ -122,7 +122,9 @@ router.post('/tasks', async (req, res) => {
         res.status(400).send(e)
     }
 })
-//This code was modified due to 
+
+
+//This code was modified due to the useage of routers 
 const User = mongoose.model('User',{
     name: {
     type: String,
