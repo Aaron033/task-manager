@@ -91,10 +91,6 @@ if(!isValidOperation) {
           //Accesing the propierty dinamically 
   
           await user.save()
-        
-
-      
-      
         //  const _id = req.params.id and req.params.id are the same thing 
        // const user = await User.findByIdAndUpdate(req.params.id,  req.body, {new: true, runValidators: true })
         //It will return the new user instead of the founded one

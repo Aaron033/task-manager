@@ -60,7 +60,7 @@ userSchema.pre('save', async function(next) {
 //   console.log('Just before saving')
 //   next()
 
-if(user.isModified(password)) { 
+if(user.isModified('password')) { 
 
 //The second argument is the number of roaunds
 user.password = await bcrypt.hash(user.password, 8)
