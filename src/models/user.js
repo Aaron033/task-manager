@@ -50,6 +50,11 @@ const userSchema = new mongoose.Schema(
     
         }
     } )
+userSchema.statics.findByCredentials = async (email, password) => {
+
+}
+
+    //Hash the plain text password before saving 
 
 // The second argument must be a standard function 
 // beacuse arrow functions does not work with 
