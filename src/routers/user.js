@@ -22,7 +22,14 @@ res.status(201).send(user)
 })
 
 router.post('/users/login', async (req, res) => {
-    
+    try{ 
+
+        const user = await User.findByCredentials(req.body.email, req.body.password)
+
+
+    } catch(e) {
+
+    }
 })
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GET ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/
