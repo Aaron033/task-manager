@@ -18,24 +18,24 @@ app.use(taskRouter)
 const bcrypt = require('bcryptjs')
 
 //********************************************************************************************* */
-const myfunction = async () => {
+//const myfunction = async () => {
     //the password is what the user provide us 
-const password = "Red32345"
+//const password = "Red32345"
 
 //The first argument is the plain text 
 //The second argument is the number or rounds its how many times the algorithm is executed not too few; easy to crack.Not too many; long process 
-const hashedPassword = await bcrypt.hash(password, 8 )
+//const hashedPassword = await bcrypt.hash(password, 8 )
 
-console.log(password)
-console.log(hashedPassword)
+//console.log(password)
+//console.log(hashedPassword)
 
 //This code will output the true if password matches the hashed password 
-const isMatch = await bcrypt.compare(password, hashedPassword)
+//const isMatch = await bcrypt.compare(password, hashedPassword)
 
-console.log(isMatch)
-}
+//console.log(isMatch)
+//}
 
-myfunction()
+//myfunction()
 
 
 
