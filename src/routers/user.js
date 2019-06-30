@@ -6,9 +6,7 @@ const router = new express.Router()
 
 
 
-// router.get('/test', (req, res) => {
-//     res.send('From a new file')
-// })
+
 
 //in order to access a http page we must use an http functionality 
 router.post('/users', async (req, res) => { 

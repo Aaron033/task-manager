@@ -171,3 +171,7 @@ const User = mongoose.model('User',{
 
     }
 } )
+
+// router.get('/test', (req, res) => {
+//     res.send('From a new file')
+// })
