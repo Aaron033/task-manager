@@ -57,6 +57,12 @@ if (!user) {
     throw new Error('unable to login')
 }
 
+//Getting the password typed and password storage 
+const isMatch = await bcrypt.compare(password, user.password)
+//checking for matching password 
+if(!isMatch) {
+    
+}
 }
 
     //Hash the plain text password before saving 
