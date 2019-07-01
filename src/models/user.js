@@ -61,8 +61,10 @@ if (!user) {
 const isMatch = await bcrypt.compare(password, user.password)
 //checking for matching password 
 if(!isMatch) {
-    
+    throw new Error('Unable to login')
 }
+// If the email or password was a match: it would return  the user 
+return user 
 }
 
     //Hash the plain text password before saving 
