@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
-// Validator to check emails, credit cards, etc. 
+// Validator:its a npm module that containes functions to check emails, credit cards, etc. 
 
 const userSchema = new mongoose.Schema(
     {
@@ -91,4 +91,4 @@ next()
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
-//code working 
+
