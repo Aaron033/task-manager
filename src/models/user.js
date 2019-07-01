@@ -67,7 +67,7 @@ userSchema.pre('save', async function(next) {
 
 if(user.isModified('password')) { 
 
-//The second argument is the number of roaunds
+//The second argument is the number of rounds
 user.password = await bcrypt.hash(user.password, 8)
 }
 
