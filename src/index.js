@@ -13,6 +13,8 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
+app.listen(port, () => { 
+    console.log('Server is up on port ' + port)
 
 const bcrypt = require('bcryptjs')
 
@@ -22,8 +24,7 @@ const bcrypt = require('bcryptjs')
 
 //Task collection code ends 
 //********************************************************************************************* */
-app.listen(port, () => { 
-    console.log('Server is up on port ' + port)
+
 })
 
 //code is partially working 
