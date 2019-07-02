@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema(
     {
         name: {
         type: String,
-    
         trim: true,
         require: true
     
@@ -27,6 +26,7 @@ const userSchema = new mongoose.Schema(
         },
         email: {
           type: String, 
+          unique: true, 
           required: true,
           trim: true, 
           lowercase: true,
