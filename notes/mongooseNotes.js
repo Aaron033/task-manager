@@ -196,6 +196,7 @@ const User = mongoose.model('User',{
 //console.log(isMatch)
 //}
 
+//This how you call a function 
 //myfunction()
 
 
