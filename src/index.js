@@ -20,4 +20,3 @@ const bcrypt = require('bcryptjs')
 
 })
 
-//code is partially working 
