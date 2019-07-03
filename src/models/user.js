@@ -66,9 +66,7 @@ if(!isMatch) {
 // If the email or password was a match: it would return  the user 
 return user 
 }
-
-    //Hash the plain text password before saving 
-
+//Hash the plain text password before saving 
 // The second argument must be a standard function 
 // beacuse arrow functions does not work with 
 userSchema.pre('save', async function(next) { 
