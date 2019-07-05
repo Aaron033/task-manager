@@ -20,6 +20,9 @@ app.listen(port, () => {
 const myFunction = async() =>{ 
 const token = jwt.sign({_id: 'abc123'}, 'thisismyaaron')
 console.log(token)
+
+const data = jwt.verify(token, 'thisismyaaron')
+console.log(data)
 }
 
 myFunction() 
