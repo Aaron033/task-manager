@@ -23,7 +23,7 @@ res.status(201).send(user)
 
 router.post('/users/login', async (req, res) => {
     try{ 
-
+ // User is a general section of all users 
         const user = await User.findByCredentials(req.body.email, req.body.password)
 res.send(user)
 
