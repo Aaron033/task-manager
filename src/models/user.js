@@ -55,6 +55,10 @@ const userSchema = new mongoose.Schema(
         //normal function not an arrow one 
         const user = this 
 
+        const token = jwt.sign({}, 'thisismyaaron')
+
+
+
     } 
 
     //Statics are accesible on our model methods 
