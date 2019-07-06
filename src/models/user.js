@@ -56,7 +56,7 @@ const userSchema = new mongoose.Schema(
         const user = this 
 //user._id is an object so we must converted to a string 
         const token = jwt.sign({_id: user._id.toSting()}, 'thisismyaaron')
-
+return token 
 
 
     } 
