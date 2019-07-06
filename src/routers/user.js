@@ -18,7 +18,7 @@ res.status(201).send(user)
        res.status(400).send(e)
    }
 
-   
+
 })
 
 router.post('/users/login', async (req, res) => {
