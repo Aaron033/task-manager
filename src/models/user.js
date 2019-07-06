@@ -50,9 +50,10 @@ const userSchema = new mongoose.Schema(
     
         }
     } )
-
+//methods are accesible on our instances methods 
     userSchema.methods.generateAuthToken = async 
 
+    //Statics are accesible on our model methods 
 userSchema.statics.findByCredentials = async (email, password) => {
  //Short cut can be used email: email = email
     const user = await User.findOne({ email})
