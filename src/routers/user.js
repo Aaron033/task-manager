@@ -25,6 +25,8 @@ router.post('/users/login', async (req, res) => {
     try{ 
  // User is a general section of all users 
         const user = await User.findByCredentials(req.body.email, req.body.password)
+        //This code is for a specific user 
+        const token = await user.generateAuthToken() 
 res.send(user)
 
     } catch(e) {
