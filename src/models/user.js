@@ -54,8 +54,8 @@ const userSchema = new mongoose.Schema(
     userSchema.methods.generateAuthToken = async function () { 
         //normal function not an arrow one 
         const user = this 
-
-        const token = jwt.sign({}, 'thisismyaaron')
+//user._id is an object so we must converted to a string 
+        const token = jwt.sign({_id: user._id.toSting()}, 'thisismyaaron')
 
 
 
