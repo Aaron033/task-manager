@@ -12,7 +12,9 @@ router.post('/users', async (req, res) => {
    const user = new User(req.body)
    //Everthing from here is going to run if it is succesfull or not 
    try{ 
+       //we save the user 
        await user.save()
+       
        const token = await user.generateAuthToken()
        res.status(201).send({ user, token })
      
