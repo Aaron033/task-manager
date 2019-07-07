@@ -32,6 +32,6 @@ const promise3 = new Promise((resolve, reject) => {
     setTimeout(resolve, 2000, 'Goodbye')
 })
 
-const promise4 = fetch('') 
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(response.json()) 
 
-Promise.all([promise, ])
+Promise.all([promise1, promise2, promise3, promise4 ])
