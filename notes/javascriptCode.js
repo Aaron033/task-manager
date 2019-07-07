@@ -22,6 +22,13 @@ console.log('This is in the catch' + message ) // This is code is going to be ex
 
 })
 
+//Async / Await 
+async function init() {
+    await createPost({ title: 'post Three', body: 'This is post three'}); 
+    getPosts();
+}
+
+
 //Using promise.all 
 
 const promise1 = Promise.resolve('Hello World')
@@ -34,7 +41,8 @@ const promise3 = new Promise((resolve, reject) => {
 
 const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then( res =>{
     res.json()
-) 
+    //when using fetch you must convert the info to json format 
+); 
 
 Promise.all([promise1, promise2, promise3, promise4 ])
 .then( values =>{
