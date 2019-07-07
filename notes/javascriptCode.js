@@ -21,3 +21,17 @@ console.log('This is in the catch' + message ) // This is code is going to be ex
 
 
 })
+
+//Using promise.all 
+
+const promise1 = Promise.resolve('Hello World')
+
+const promise2 = 10; 
+
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000, 'Goodbye')
+})
+
+const promise4 = fetch('') 
+
+Promise.all([promise, ])
