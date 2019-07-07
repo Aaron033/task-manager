@@ -26,9 +26,6 @@ console.log(data)
 }
 
 
-
-
-
 myFunction() 
 
 
