@@ -80,7 +80,7 @@ return user
 }
 //Hash the plain text password before saving 
 // The second argument must be a standard function 
-// beacuse arrow functions does not work with 
+// beacuse arrow functions does not work.
 userSchema.pre('save', async function(next) { 
     //exapmles of pre functionality , before validator or before saving  
     // the function of next is to run a code before a user is saved 
