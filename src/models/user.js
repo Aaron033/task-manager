@@ -3,6 +3,7 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 // Validator:its a npm module that containes functions to check emails, credit cards, etc. 
 const jwt = require('jsonwebtoken')
+
 const userSchema = new mongoose.Schema(
     {
         name: {
@@ -48,7 +49,13 @@ const userSchema = new mongoose.Schema(
             }
         }
     
-        }
+        },
+        tokens: [{
+            token: {
+                type: String,
+                required: true
+            }
+        }]
     } )
 //methods are accesible on our instances methods 
     userSchema.methods.generateAuthToken = async function() { 
@@ -56,6 +63,8 @@ const userSchema = new mongoose.Schema(
         const user = this 
 //user._id is an object so we must converted to a string 
         const token = jwt.sign({_id: user._id.toSting()}, 'thisismyaaron')
+        user.tokens = user.tokens.concat({ token })
+        await user.save()
 return token 
 
 
