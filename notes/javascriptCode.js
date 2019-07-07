@@ -17,7 +17,7 @@ let p = new Promise((resolve, reject) => {
 p.then((message) => {
     console.log('This is in the then ' + message)  // This is code is going to be executed with the resolve function  
 }).catch((message) => { 
-console.log('This is in the catch') + message ) // This is code is going to be executed with the reject function  
+console.log('This is in the catch' + message ) // This is code is going to be executed with the reject function  
 
 
 })
