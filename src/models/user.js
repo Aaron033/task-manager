@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
         }
     } )
 //methods are accesible on our instances methods 
-    userSchema.methods.generateAuthToken = async function () { 
+    userSchema.methods.generateAuthToken = async function() { 
         //normal function not an arrow one 
         const user = this 
 //user._id is an object so we must converted to a string 
