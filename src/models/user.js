@@ -62,7 +62,7 @@ const userSchema = new mongoose.Schema(
         //normal function not an arrow one 
         const user = this 
 //user._id is an object so we must converted to a string 
-        const token = jwt.sign({_id: user._id.toSting()}, 'thisismyaaron')
+        const token = jwt.sign({ _id: user._id.toSting()}, 'thisismyaaron')
         user.tokens = user.tokens.concat({ token })
         await user.save()
 return token 
