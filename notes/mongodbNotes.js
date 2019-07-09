@@ -1,8 +1,5 @@
 //CRUD create read update delete
 
-
-
-// const mongodb = require('mongodb')
 // Initialize the connection 
 // const MongoClient = mongodb.MongoClient
 // //MongoClient give us the necessary access to create  CRUD 
