@@ -55,4 +55,8 @@ async function fetchUsers() {
     //The code below returns a promise 
 const res = await fetch ('http://jsonplaceholder.typicode.com/users')
 
+const data = await res.json()
+//Transforming the res. to json format 
+console.log(data)
+
 }
