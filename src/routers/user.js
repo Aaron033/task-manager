@@ -44,7 +44,7 @@ res.status(400).send()
 router.get('/users', async (req, res) => {
  
     try {
-        
+
         const users = await User.find({})
         res.send(users) 
 
@@ -136,4 +136,3 @@ res.status(500).send()
 
 
 module.exports = router 
-//Cast to ObjectId failed for value "5cf9c3dc3fd7bf9d73e2ddb" at path "_id" for model "User"
