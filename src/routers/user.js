@@ -56,7 +56,7 @@ router.get('/users', async (req, res) => {
 })
 
 // expresss gives us access to routes parameters 
-//:id, could be any name
+//:id, could be any name assgined 
 
 //This code gets a single user name 
 router.get('/users/:id', async (req, res) =>{
@@ -75,6 +75,7 @@ try {
     res.send(user)
 
 }catch(e){
+    //sending a specific built in error message
     console.log(e.message)
     res.status(500).send()
 }
