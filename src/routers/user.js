@@ -20,6 +20,7 @@ router.post('/users', async (req, res) => {
        res.status(201).send({ user, token })
      
    } catch (e){
+       //This code is trigged and it showed as empty array 
        res.status(400).send(e)
    }
 
