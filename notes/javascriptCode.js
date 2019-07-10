@@ -50,3 +50,5 @@ Promise.all([promise1, promise2, promise3, promise4 ])
 })
 
 //Async / await / fetch 
+
+async function fetchUsers() {}
