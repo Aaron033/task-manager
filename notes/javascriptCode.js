@@ -51,4 +51,8 @@ Promise.all([promise1, promise2, promise3, promise4 ])
 
 //Async / await / fetch 
 
-async function fetchUsers() {}
+async function fetchUsers() {
+    //The code below returns a promise 
+const res = await fetch ('http://jsonplaceholder.typicode.com/users')
+
+}
