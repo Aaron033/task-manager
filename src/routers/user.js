@@ -44,6 +44,7 @@ res.status(400).send()
 router.get('/users', async (req, res) => {
  
     try {
+        
         const users = await User.find({})
         res.send(users) 
 
