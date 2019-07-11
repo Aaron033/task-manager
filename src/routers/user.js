@@ -13,11 +13,11 @@ router.post('/users', async (req, res) => {
        await user.save()
        
        const token = await user.generateAuthToken()
-       //we send an object 
+       //we send an object and the user 
        res.status(201).send({ user, token })
      
    } catch (e){
-       //This code is trigged and it showed as empty array 
+      
        res.status(400).send(e)
    }
 
