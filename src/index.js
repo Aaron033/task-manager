@@ -5,8 +5,7 @@ const taskRouter = require('./routers/task')
 
 
 const app = express()
-//It is not going to grab anything from the file; it just going to ensure 
-//That mongoose connects to the data base
+//It is not going to grab anything from the file; it just going to ensure that mongoose connects to the data base
 //The code below is needed in order to develop the app in heroku 
 const port = process.env.PORT || 3000 
 app.use(express.json())

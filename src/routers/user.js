@@ -3,9 +3,6 @@ const express = require('express')
 const User = require('../models/user')
 const router = new express.Router()
 //We are creating an instance of router using express 
-
-
-
 //in order to access a http page we must use an http functionality 
 router.post('/users', async (req, res) => { 
     // now we can create an instance of user
