@@ -1,5 +1,5 @@
 const express = require('express')
-//This code is how we access the user.js file and its requirements 
+//This code is how we access the user.js file on a directory 
 const User = require('../models/user')
 const router = new express.Router()
 //We are creating an instance of router using express 
