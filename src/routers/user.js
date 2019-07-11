@@ -33,7 +33,7 @@ router.post('/users/login', async (req, res) => {
 res.send({user, token})
 
     } catch(e) {
-        //It sends this code instead of 200 
+        
 res.status(400).send()
     }
 })
