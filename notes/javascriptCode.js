@@ -97,6 +97,8 @@ employee.getWage();
 function createCircle(radius){
     return {
         radius, 
-        draw: 
+        draw: function(){
+            console.log('draw')
+        }
     }
 }
