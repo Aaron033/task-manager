@@ -91,3 +91,12 @@ let employee = {
 
 //This is how we access OOP 
 employee.getWage(); 
+
+
+//Factory function  
+function createCircle(radius){
+    return {
+        radius, 
+        draw: 
+    }
+}
