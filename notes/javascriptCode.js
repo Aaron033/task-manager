@@ -77,7 +77,9 @@ let rate = 20;
 function getWage(baseSalary, overtime, rate) {
     return baseSalary + (overtime * rate) 
 }
+// Object oriented programing 
 
+//This is a standart function of OOP 
 let employee = { 
     baseSalary: 30000,
     overtime: 10, 
@@ -86,3 +88,6 @@ let employee = {
         return this.baseSalary + (this.overtime * this.rate); 
     }
 }
+
+//This is how we access OOP 
+employee.getWage(); 
