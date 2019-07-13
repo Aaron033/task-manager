@@ -67,12 +67,12 @@ fetchUsers();
 //Cast to ObjectId failed for value "5cf9c3dc3fd7bf9d73e2ddb" at path "_id" for model "User"
 
 // #############################################################################################################
-
+//This is an example of encapsulation 
 
 //working with Object Oriented Programing 
 
 //Normal declaration 
-//This is an example of encapsulation 
+
 // #############################################################################################################
 //Procedure example 
 let baseSalary = 30000; 
@@ -85,8 +85,6 @@ function getWage(baseSalary, overtime, rate) {
 //Procedure example  ends 
 // #########################################################################################
 
-
-
 //This is a standart function of OOP 
 let employee = { 
     baseSalary: 30000,
@@ -96,11 +94,12 @@ let employee = {
         return this.baseSalary + (this.overtime * this.rate); 
     }
 }
-
-//This is how we access OOP 
 employee.getWage(); 
 
+
+//This is an example of encapsulation  end 
 // #############################################################################################################
+
 //Factory function  
 function createCircle(radius){
     return {
