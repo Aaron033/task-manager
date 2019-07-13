@@ -119,3 +119,7 @@ function createCircle(radius){
         }
     }
 }
+
+const circle = createCircle(1); 
+
+circle.draw()
