@@ -21,7 +21,7 @@ console.log('This is in the catch' + message ) // This is code is going to be ex
 
 
 })
-
+// #############################################################################################################
 //Async / Await 
 async function init() {
     await createPost({ title: 'post Three', body: 'This is post three'}); 
@@ -48,7 +48,7 @@ Promise.all([promise1, promise2, promise3, promise4 ])
 .then( values =>{
     console.log(values)
 })
-
+// #############################################################################################################
 //Async / await / fetch 
 
 async function fetchUsers() {
@@ -62,7 +62,7 @@ console.log(data)
 }
 
 fetchUsers(); 
-
+// #############################################################################################################
 
 //special notes 
 //Cast to ObjectId failed for value "5cf9c3dc3fd7bf9d73e2ddb" at path "_id" for model "User"
@@ -92,7 +92,7 @@ let employee = {
 //This is how we access OOP 
 employee.getWage(); 
 
-
+// #############################################################################################################
 //Factory function  
 function createCircle(radius){
     return {
