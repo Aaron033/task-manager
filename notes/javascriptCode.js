@@ -72,7 +72,9 @@ fetchUsers();
 //working with Object Oriented Programing 
 
 //Normal declaration 
-
+//This is an example of encapsulation 
+// #############################################################################################################
+//Procedure example 
 let baseSalary = 30000; 
 let overtime = 10; 
 let rate = 20; 
@@ -80,7 +82,10 @@ let rate = 20;
 function getWage(baseSalary, overtime, rate) {
     return baseSalary + (overtime * rate) 
 }
-// Object oriented programing 
+//Procedure example  ends 
+// #########################################################################################
+
+
 
 //This is a standart function of OOP 
 let employee = { 
