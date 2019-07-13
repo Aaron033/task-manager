@@ -1,4 +1,12 @@
-// learning javascript promises and async await 
+// learning javascript OOP and async await 
+
+//Encapsulation: Reduce complexity + increase reusability 
+//Abstraction: Reduce complexity  + isolate impact of changes 
+// Inheritance: Eliminate redundant code 
+//Polymorphism: Refactor ugly switch/Case statements 
+
+
+// #############################################################################################################
 
 //Working with promises
 
@@ -99,6 +107,8 @@ employee.getWage();
 
 //This is an example of encapsulation  end 
 // #############################################################################################################
+
+
 
 //Factory function  
 function createCircle(radius){
