@@ -142,3 +142,8 @@ const another = new Circle(1);
 // Symbol 
 // undefined 
 // null 
+
+// Reference Types 
+// Object 
+// Array 
+//Function 
