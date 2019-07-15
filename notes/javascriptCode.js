@@ -153,3 +153,21 @@ const another = new Circle(1);
 //Differenciating
 // Primitives are compied by value 
 // Objects are copied by their reference 
+
+// ###############################################################################
+function Circle(radius){
+    this.radius = radius; 
+    this.draw = function(){ 
+        console.log('draw')
+    }
+
+}
+
+const circle = new Circle(10); 
+
+circle.location = { x: 1} 
+// circle['location'] = { x: 1}  same as above 
+const propertyName = 'center location'
+
+
+
