@@ -133,3 +133,12 @@ function Circle(radius){
 }
 //The word new will create an empty object 
 const another = new Circle(1); 
+// #############################################################################################################
+
+// Value types (primitive )
+// Number 
+// String 
+// Boolean 
+// Symbol 
+// undefined 
+// null 
