@@ -147,3 +147,5 @@ const another = new Circle(1);
 // Object 
 // Array 
 //Function 
+
+// functions  and arrays are objects in javascript 
