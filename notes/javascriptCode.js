@@ -149,3 +149,7 @@ const another = new Circle(1);
 //Function 
 
 // functions  and arrays are objects in javascript 
+
+//Differenciating
+// Primitives are compied by value 
+// Objects are copied by their reference 
