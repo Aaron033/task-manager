@@ -165,9 +165,11 @@ function Circle(radius){
 
 const circle = new Circle(10); 
 
+// ##################################################################
 circle.location = { x: 1} 
-// circle['location'] = { x: 1}  same as above 
+// circle['location'] = { x: 1}  same as above; This is used when you have a space or a dash 
 const propertyName = 'center location'
+circle[propertyName] = {x: 1}
 
 
 
