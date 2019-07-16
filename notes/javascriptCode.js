@@ -171,8 +171,11 @@ for(let key in circle) {
 // This is how we access the value of a key 
 console.log(key, circle[key])
     }
-    
+  
 }
+
+const keys = Object.keys(circle)
+console.log(keys)
 
 // ##################################################################
 circle.location = { x: 1} 
