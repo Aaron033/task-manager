@@ -165,8 +165,13 @@ function Circle(radius){
 
 const circle = new Circle(10); 
 for(let key in circle) {
-    // This is how we access the value of a key 
-    console.log(key, circle[key])
+
+    //This how we only get the properties  
+    if(typeof circle[key] !== 'function'){
+// This is how we access the value of a key 
+console.log(key, circle[key])
+    }
+    
 }
 
 // ##################################################################
