@@ -194,4 +194,10 @@ const propertyName = 'center location'
 circle[propertyName] = {x: 1}
 
 
+function car(type){
+    this.type = type, 
 
+    this.drive = function() {
+        console.log(drives)
+    }
+}
