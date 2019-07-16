@@ -177,6 +177,11 @@ console.log(key, circle[key])
 const keys = Object.keys(circle)
 console.log(keys)
 
+//This is how we check a specific propertie in a function (example)
+if ('radius' in circle){ 
+    console.log('Circle has a radius')
+}
+
 // ##################################################################
 circle.location = { x: 1} 
 // circle['location'] = { x: 1}  same as above; This is used when you have a space or a dash 
