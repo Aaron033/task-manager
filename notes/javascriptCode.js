@@ -164,6 +164,10 @@ function Circle(radius){
 }
 
 const circle = new Circle(10); 
+for(let key in circle) {
+    // This is how we access the value of a key 
+    console.log(key, circle[key])
+}
 
 // ##################################################################
 circle.location = { x: 1} 
