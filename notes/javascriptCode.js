@@ -171,14 +171,14 @@ function Circle(radius){
 const circle = new Circle(10); 
 for(let key in circle) {
 
-    //This how we only get the properties  
+    //This how we check if it is a method(function)
     if(typeof circle[key] !== 'function'){
 // This is how we access the value of a key 
 console.log(key, circle[key])
     }
   
 }
-
+//This code only gives you the keys 
 const keys = Object.keys(circle)
 console.log(keys)
 
