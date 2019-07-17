@@ -10,5 +10,9 @@ function automobile(type){
 const car = new automobile('chevy')
 console.log(car)
 
-console.log(car.type)
+for( let key in automobile){
+
+    let o = typeof(car[key])
+}
+
  
