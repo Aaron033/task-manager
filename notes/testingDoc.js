@@ -5,3 +5,5 @@ function car(type){
         console.log(drives)
     }
 }
+
+console.log(car(ford))
