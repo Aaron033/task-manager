@@ -4,5 +4,8 @@ function car(type){
     this.drive = function() {
         console.log(drives)
     }
+    console.log("Hello")
 }
-console.log(car.drive())
+
+
+ 
