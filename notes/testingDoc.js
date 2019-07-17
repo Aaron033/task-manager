@@ -1,4 +1,4 @@
-function car(type){
+function automobile(type){
     this.type = type, 
 
     this.drive = function() {
@@ -7,5 +7,8 @@ function car(type){
     console.log("Hello")
 }
 
+const car = new automobile('chevy')
+console.log(car)
 
+console.log(car.type)
  
