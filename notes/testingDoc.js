@@ -16,3 +16,5 @@
 
 let salary = document.getElementById('salary')
 console.log(salary)
+
+//This code will never work 
