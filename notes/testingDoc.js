@@ -14,5 +14,5 @@
 
 // console.log(keys)
 
-let salary = document.getElementById('salary').innerHTML
+let salary = document.getElementById('salary').value
 console.log(salary)
