@@ -13,7 +13,3 @@
 // const keys = Object.keys(car)
 
 // console.log(keys)
-
-
-
-//This code will never work 
