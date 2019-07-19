@@ -35,7 +35,7 @@ startTime = new Date();
         endTime = new Date()
 //This code return the number in miliseconds that's why we divide by 1000
         const seconds = (endTime.getTime() - startTime.getTime() )/ 1000
-
+//gettime() is a function of Date() 
     }
 
     this.reset = function() { 
