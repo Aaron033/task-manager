@@ -162,13 +162,16 @@ let defaultLocation = {x: 0, y: 0}
 
     //The code below can be access from outside of the Circle function
     //this.defaultLocation = { x:0, y: 0} 
-    this.computeOptimumLocation =  function() {
+ this.getDefaultLocation = function() {
+     return defaultLocation; 
+ }
 
-    }
     this.draw = function(){ 
         console.log('draw')
     }
 
+    //  ----this---- is referrering to the the property of the Circle 
+    Object.defineProperties(this, 'defaultLocation')
 }
 
 const circle = new Circle(10); 
