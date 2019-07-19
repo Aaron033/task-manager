@@ -28,11 +28,13 @@ startTime = new Date();
 
     this.stop = function() { 
         if(!running)
-        throw new Error('Stopwatch has already stopped')
+        throw new Error('Stopwatch is not started')
     
         running = false 
     
-        startTime = new Date()
+        endTime = new Date()
+//This code return the number in miliseconds that's why we divide by 1000
+        const seconds = (endTime.getTime() - startTime.getTime() )/ 1000
 
     }
 
