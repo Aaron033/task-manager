@@ -15,10 +15,15 @@
 // console.log(keys)
 
 function Stopwatch() { 
-    let startTime, endTime, running, duration= 0; 
+    let startTime, endTime, running, duration = 0; 
 
     this.start = function() { 
+if(running)
+    throw new Error('Stopwatch has already started')
 
+runnig = true 
+
+startTime = new Date();
     }
 
     this.stop = function() { 
@@ -30,6 +35,6 @@ function Stopwatch() {
     }
 
     Object.defineProperty(this, 'duration', { 
-        
+        get: function() { return duration}
     })
 }
