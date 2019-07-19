@@ -27,17 +27,17 @@ startTime = new Date();
     }
 
     this.stop = function() { 
-        if(stop)
+        if(!running)
         throw new Error('Stopwatch has already stopped')
     
-        stop = true 
+        running = false 
     
         startTime = new Date()
 
     }
 
     this.reset = function() { 
-        
+
 
     }
 
