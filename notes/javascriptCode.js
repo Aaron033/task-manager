@@ -157,8 +157,11 @@ const another = new Circle(1);
 // ###############################################################################
 function Circle(radius){
     this.radius = radius; 
+ //This code below can not be access from the outsise(private)
+let defaultLocation = {x: 0, y: 0}
 
-    this.defaultLocation = { x:0, y: 0} 
+    //The code below can be access from outside of the Circle function
+    //this.defaultLocation = { x:0, y: 0} 
     this.computeOptimumLocation =  function() {
 
     }
