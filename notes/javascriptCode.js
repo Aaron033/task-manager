@@ -171,9 +171,21 @@ let defaultLocation = {x: 0, y: 0}
     }
 
     //  ----this---- is referrering to the the property of the Circle 
-    Object.defineProperties(this, 'defaultLocation')
+    Object.defineProperty(this, 'defaultLocation',{
+        //'defaultLocation' referres to read only  
+        get: function() { 
+            return defaultLocation
+        },
+        set: function(value) { 
+            defaultLocation = value;
+        }
+    })
 }
+circle.defaultLocation
 
+
+
+// ################################################
 const circle = new Circle(10); 
 for(let key in circle) {
 
@@ -184,6 +196,7 @@ console.log(key, circle[key])
     }
   
 }
+// ################################################
 //This code only gives you the keys 
 const keys = Object.keys(circle)
 console.log(keys)
