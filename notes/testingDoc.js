@@ -27,6 +27,7 @@ startTime = new Date();
     }
 
     this.stop = function() { 
+        //If is not running we can not stop it 
         if(!running)
         throw new Error('Stopwatch is not started')
     
@@ -39,8 +40,10 @@ startTime = new Date();
     }
 
     this.reset = function() { 
-
-
+startTime = null; 
+endTime = null;
+running = false;
+duration = 0 ;
     }
 
     Object.defineProperty(this, 'duration', { 
