@@ -212,4 +212,18 @@ circle.location = { x: 1}
 const propertyName = 'center location'
 circle[propertyName] = {x: 1}
 
+// #################################
+//Factory functions 
+function createCircle(radius)  { 
+    return { 
+        radius, 
+        draw(){ 
+            console.log('draw')
+        }
+    }
+}
+
+const circle = createCircle(1)
+console.log(circle1)
+
 
