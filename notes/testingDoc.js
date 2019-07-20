@@ -50,19 +50,21 @@
 //         get: function() { return duration}
 //     })
 // }
-function add(x, y){ 
-    return { 
-        multy(){
-console.log(x * y)
-        },
-        addition() { 
-            console.log(x + y)
-        }
-    }
-}
+// function add(x, y){ 
+//     return { 
+//         multy(){
+// console.log(x * y)
+//         },
+//         addition() { 
+//             console.log(x + y)
+//         }
+//     }
+// }
 
-const suma = add(23,45)
-//This is how we access to the additon method 
-console.log(suma.addition())
-console.log(suma.multy())
+// const suma = add(23,45)
+// //This is how we access to the additon method 
+// console.log(suma.addition())
+// console.log(suma.multy())
+
+
 
