@@ -213,7 +213,7 @@ const propertyName = 'center location'
 circle[propertyName] = {x: 1}
 
 // #################################
-//Factory functions 
+//################################Factory functions ################################
 function createCircle(radius)  { 
     return { 
         radius, 
@@ -238,4 +238,15 @@ function add(x, y){
 
 const suma = add(23,45)
 console.log(suma)
-// #################################
+//################################Constructor functions ###########################
+
+function Circle(radius) {
+    this.radius = radius; 
+    this.draw = function() { 
+        console.log('draw')
+
+    }
+
+}
+
+const circle = new Circle(3)
