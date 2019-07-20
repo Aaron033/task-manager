@@ -223,7 +223,19 @@ function createCircle(radius)  {
     }
 }
 
-const circle = createCircle(1)
+const circle1 = createCircle(1)
 console.log(circle1)
 
+// #################################
 
+function add(x, y){ 
+    return { 
+        addition() { 
+            console.log(x + y)
+        }
+    }
+}
+
+const suma = add(23,45)
+console.log(suma)
+// #################################
