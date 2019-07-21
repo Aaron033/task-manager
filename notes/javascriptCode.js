@@ -257,7 +257,28 @@ const person = {
     lastName: 'Hamedani', 
    get  fullName() { 
         return `${person.firstName} ${person.lastName}`
+    }, 
+    set fullName(value) { 
+        //This code will return an array 
+        const parts = value.split(' '); 
+        this.firstName = parts[0]; 
+        this.lastName = parts[1]; 
     }
 }
 
-person.fullName = 'Aaron Botello '
+person.fullName = 'Aaron Botello'
+
+console.log(person.fullName)
+
+//################################ Local vs Global ###########################
+
+const color = 'red'
+
+function start() {
+    const message = 'hi'; 
+    const aaron = "Botello"
+    // I can access the global variable color 
+    console.log(color)
+}
+
+// I cannot access the aaron variable do to it is inside a block(local) 
