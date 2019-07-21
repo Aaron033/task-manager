@@ -142,11 +142,12 @@ video.showTags()
 
 //################################ Template literasl  ###########################
 const name = 'Aaron'; 
-
+//you can also some functionality  
 const call = 
-` Hi ${name}, 
+` Hi ${name} ${34 * 5 }, 
 Thank you ${name} for joining my mailing list 
 
 Regrds, 
 Mosh
 `; 
+
