@@ -308,7 +308,8 @@ const another = { ...circle}
 console.log(another)
 //################################ this ###########################
 //mehtod -> obj    .... This reflects the object itself 
-//function -> global (window, global) global in node , window in browsers 
+//function -> global (window, global) global in node , window in browsers
+// (whenever im using 'this' refers the window/global object in a function)
 
 const video ={ 
     title: 'a', 
@@ -336,3 +337,18 @@ function Video() {
 
  const v = new Video('q')  // {} 'this' refers to the object 
 
+ //****************************** */
+ //Antoher way 
+
+ const vide2 = { 
+     title: 'a', 
+     tags: ['a', 'b', 'd'], 
+     showTags() { 
+         this.tags.forEach(function(tag) { 
+             console.log(this.title, tag)
+             //if you only use 'this' it will be target the window object 
+         }, this ) // 'this' is required 
+     }
+ }
+
+video.showTags()
