@@ -161,8 +161,21 @@ const filtered = numbers.filter(n => n >= 0)
 //This code gives you an array 
 const items = filtered.map(n => '<li>' + n + '</li>')
 //This code will output a list of items 
-const html = items.join(); 
+const html = '<ul>' + items.join('') + '</ul>'; 
+//by default it will  display a comma 
+// Now it join the list by a space 
 
-console.log(items)
+console.log(html)
+//################################
+const items = filtered.map(n =>{
+    return {value: n}
+    // 0: {value: 1}
+    // 1: {value: 2}
+
+})
+//const items = filtered.map(n =>{n => ({value: n})
+//Because javascript will look at this as an object 
+//################################
+
 
 
