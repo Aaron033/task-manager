@@ -177,9 +177,10 @@ const items = filtered.map(n =>{
 //Because javascript will look at this as an object 
 //################################
 const num = [2,34,5,3]
-
+//This code reffers to chaining 
 const items = num 
 .filter(n => n >= 0 )
-.map(n => ({value: n})) 
+.map(n => ({value: n}))
+.map(obj => obj.value > 1)  // The first obj returns an object // The second obj. is address if we want only values greater than 1 
 console.log(items)
 
