@@ -283,3 +283,21 @@ function start() {
 
 // I cannot access the aaron variable do to it is inside a block(local) 
 //Note you should never set a global variable bad practice 
+
+//################################ cloning an Object ###########################
+
+const circle = {
+    radius: 1, 
+    draw() { 
+        console.log('draw')
+    }
+}
+
+//Const another = {} 
+//for (let key in circle)
+  //another[key] = circle[key]
+//The code below is a only way to copy the keys 
+
+//The code below has the same functionality as the code above 
+const another = Object.assign({}, circle)
+console.log(another)
