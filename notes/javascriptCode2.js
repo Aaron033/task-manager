@@ -150,4 +150,16 @@ Thank you ${name} for joining my mailing list
 Regrds, 
 Mosh
 `; 
+//################################ Array filter  ###########################\
+
+const numbers = [1, -1, 3, 4]
+
+// const filter = numbers.filter(function (value) { return value >= 0  } 
+//The first n is refering to a function the second n is referred as the returned value 
+const filtered = numbers.filter(n => n >= 0)
+
+
+const items = filtered.map(n => '<li>' + n + '</li>')
+
+console.log(items)
 
