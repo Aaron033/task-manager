@@ -158,8 +158,11 @@ const numbers = [1, -1, 3, 4]
 //The first n is refering to a function the second n is referred as the returned value 
 const filtered = numbers.filter(n => n >= 0)
 
-
+//This code gives you an array 
 const items = filtered.map(n => '<li>' + n + '</li>')
+//This code will output a list of items 
+const html = items.join(); 
 
 console.log(items)
+
 
