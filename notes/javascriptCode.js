@@ -300,4 +300,27 @@ const circle = {
 
 //The code below has the same functionality as the code above 
 const another = Object.assign({}, circle)
+//you can also add some properties and methods 
+
+//This is also another form 
+const another = { ...circle}
+
 console.log(another)
+//################################ this ###########################
+//mehtod -> obj    .... This reflects the object itself 
+//function -> global (window, global) global in node , window in browsers 
+
+const video ={ 
+    title: 'a', 
+    play() {
+        console.log(this)
+    }
+
+}
+
+
+video.stop = function() { 
+    console.log(this)
+}
+
+video.stop()
