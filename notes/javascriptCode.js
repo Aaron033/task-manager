@@ -282,3 +282,4 @@ function start() {
 }
 
 // I cannot access the aaron variable do to it is inside a block(local) 
+//Note you should never set a global variable bad practice 
