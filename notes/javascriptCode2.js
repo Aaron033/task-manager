@@ -183,4 +183,5 @@ const items = num
 .map(n => ({value: n}))
 .map(obj => obj.value > 1)  // The first obj returns an object // The second obj. is address if we want only values greater than 1 
 console.log(items)
+//################################ Array Reduce  ###########################\
 
