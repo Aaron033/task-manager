@@ -321,6 +321,18 @@ const video ={
 
 video.stop = function() { 
     console.log(this)
+// 'this' refers to the video object 
 }
 
 video.stop()
+
+//****************************** */
+//Capital letter to construction function ( a combention used by developers)
+function Video() { 
+    this.title = title; 
+    console.log(this)
+    // 'this' referes to the window object 
+}
+
+ const v = new Video('q')  // {} 'this' refers to the object 
+
