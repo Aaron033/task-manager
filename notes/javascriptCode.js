@@ -212,7 +212,6 @@ circle.location = { x: 1}
 const propertyName = 'center location'
 circle[propertyName] = {x: 1}
 
-// #################################
 //################################Factory functions ################################
 function createCircle(radius)  { 
     return { 
@@ -237,7 +236,8 @@ function add(x, y){
 }
 
 const suma = add(23,45)
-console.log(suma)
+//This is how we access a method 
+console.log(suma.addition())
 //################################Constructor functions ###########################
 
 function Circle(radius) {
@@ -250,3 +250,14 @@ function Circle(radius) {
 }
 
 const circle = new Circle(3)
+
+//################################ setters and getters ###########################
+const person = { 
+    firstName: 'Mosh', 
+    lastName: 'Hamedani', 
+   get  fullName() { 
+        return `${person.firstName} ${person.lastName}`
+    }
+}
+
+person.fullName = 'Aaron Botello '
