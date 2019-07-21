@@ -140,4 +140,13 @@ function Video() {
 
 video.showTags()
 
-//################################ this ###########################
+//################################ Template literasl  ###########################
+const name = 'Aaron'; 
+
+const call = 
+` Hi ${name}, 
+Thank you ${name} for joining my mailing list 
+
+Regrds, 
+Mosh
+`; 
