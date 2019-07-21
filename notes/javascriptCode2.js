@@ -176,6 +176,10 @@ const items = filtered.map(n =>{
 //const items = filtered.map(n =>{n => ({value: n})
 //Because javascript will look at this as an object 
 //################################
+const num = [2,34,5,3]
 
-
+const items = num 
+.filter(n => n >= 0 )
+.map(n => ({value: n})) 
+console.log(items)
 
