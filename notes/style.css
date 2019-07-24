@@ -31,6 +31,10 @@ grid-gap: 2px;
     font-family: 'Lucida Sans';
     
 }
+.main-menu li:hover{
+    
+}
+
 .re{
     grid-area: re;
     background-color: lightcoral !important;
@@ -79,4 +83,8 @@ text-align: right !important;
 
 .ei{
     grid-area: ei;
+}
+
+.ni{
+    grid-area: ni;
 }
