@@ -25,6 +25,7 @@ grid-gap: 2px;
     width: 50px; 
     list-style: none;
     background-color: lightskyblue;
+    text-align: center;
     
 }
 .re{
@@ -33,6 +34,9 @@ grid-gap: 2px;
     width: auto !important;
 }
 
+.le {
+text-align: right !important;
+}
 .ac { 
     grid-area: ac;
     width: auto !important;
