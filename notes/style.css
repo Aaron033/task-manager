@@ -9,11 +9,12 @@
 grid-gap: 5px;
  grid-template-areas:
   "ac ac ac del"
-  "on tw th fr"
-  "";
+  "on tw th di"
+  "fr fi si mu"
+  "se ei ni ad"
+  "po ze eq eq";
   
 background-color: lightskyblue;
-
 }
 .main-menu li {
     width: 50px; 
@@ -23,4 +24,3 @@ background-color: lightskyblue;
     grid-area: ac;
 }
 
-.*{}
