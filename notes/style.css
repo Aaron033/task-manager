@@ -29,10 +29,11 @@ grid-gap: 2px;
 }
 .re{
     grid-area: re;
-    background-color: lightcoral;
+    background-color: lightcoral !important;
 }
 
 .ac { 
     grid-area: ac;
+    
 }
 
