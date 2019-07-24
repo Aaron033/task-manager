@@ -15,7 +15,7 @@ grid-gap: 2px;
   "se ei ni ad"
   "po ze eq eq";
   width: 286px;
-  background-color: rgb(56, 27, 27);
+  background-color: rgb(56, 117, 127);
   
 }
 
@@ -30,10 +30,17 @@ grid-gap: 2px;
 .re{
     grid-area: re;
     background-color: lightcoral !important;
+    width: auto !important;
 }
 
 .ac { 
     grid-area: ac;
+    width: auto !important;
     
 }
+.eq {
+    grid-area: eq;
+    width: auto !important;
+}
+
 
