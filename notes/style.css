@@ -26,6 +26,9 @@ grid-gap: 2px;
     list-style: none;
     background-color: lightskyblue;
     text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
     
 }
 .re{
@@ -46,5 +49,34 @@ text-align: right !important;
     grid-area: eq;
     width: auto !important;
 }
+.on{
+    grid-area: on;
+}
+.tw{
+    grid-area: tw;
+}
 
 
+.th{
+    grid-area: th;
+}
+
+
+.fr{
+    grid-area: fr;
+}
+
+.fi{
+    grid-area: fi;
+}
+
+.si{
+    grid-area: si;
+}
+.se{
+    grid-area: se;
+}
+
+.ei{
+    grid-area: ei;
+}
