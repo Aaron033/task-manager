@@ -8,6 +8,7 @@
     display: grid; 
 grid-gap: 2px;
  grid-template-areas:
+ "re re  re re"
   "ac ac ac del"
   "on tw th di"
   "fr fi si mu"
@@ -25,6 +26,10 @@ grid-gap: 2px;
     list-style: none;
     background-color: lightskyblue;
     
+}
+.re{
+    grid-area: re;
+    background-color: lightcoral;
 }
 
 .ac { 
