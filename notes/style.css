@@ -5,19 +5,22 @@
 
 .main-menu{
     display: grid; 
-    
-grid-gap: 5px;
+grid-gap: 2px;
  grid-template-areas:
   "ac ac ac del"
   "on tw th di"
   "fr fi si mu"
   "se ei ni ad"
   "po ze eq eq";
+  width: 250px;
   
-background-color: lightskyblue;
 }
+
+
 .main-menu li {
     width: 50px; 
+    list-style: none;
+    background-color: lightskyblue;
 }
 
 .ac { 
