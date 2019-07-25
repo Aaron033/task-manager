@@ -1,6 +1,7 @@
 *, body {
     margin: 0; 
-    padding: 0; 
+    padding: 0;
+   // box-sizing: border-box; 
 }
 
 body{
@@ -14,7 +15,7 @@ body{
     color:lightblue; 
     font-size: 7em; 
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .main-menu{
     margin: auto auto;
@@ -42,6 +43,7 @@ grid-gap: 2px;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Lucida Sans';
+    height: 40px;
     
 }
 .main-menu li:hover{
