@@ -1,4 +1,4 @@
-let addition = document.getElementsByClassName("ad").addEventListener("click", function(){
+let addition = document.getElementsById("ad").addEventListener("click", function(){
 console.log("addition clicked")
 })
 
