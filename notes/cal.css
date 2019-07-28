@@ -24,5 +24,10 @@ text-align: center;
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     /* 120px auto it will grow as it need to be to fix the number typed  */
-    grid-template-rows: minmax(120px, auto) repeat(4, 100px); 
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); 
+}
+
+/* selecting all the buttons  */
+.cal-grid > button{
+
 }
