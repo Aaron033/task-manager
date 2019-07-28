@@ -29,5 +29,7 @@ text-align: center;
 
 /* selecting all the buttons  */
 .cal-grid > button{
-
+cursor: pointer ; 
+font-size: 2rem; 
+border: 1px solid 
 }
