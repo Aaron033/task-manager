@@ -10,3 +10,4 @@
 let add = document.querySelector(".ad").addEventListener("click", function(){
     console.log("add")
 })
+
