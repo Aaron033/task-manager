@@ -8,6 +8,8 @@
 // one.onclick = change;
 
 let add = document.querySelector(".ad").addEventListener("click", function(){
-    console.log("add")
+return "+" 
 })
+
+console.log( " 5 " + add() + " 4" )
 
