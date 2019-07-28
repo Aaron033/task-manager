@@ -46,7 +46,7 @@ grid-gap: 2px;
     height: 40px;
     
 }
-.main-menu li:hover{
+#main-menu li:hover{
     background-color: lightcyan;
 }
 
