@@ -22,4 +22,6 @@ text-align: center;
     justify-content: center; 
     align-items: center; 
     min-height: 100vh;
+    grid-template-columns: repeat(4, 100px)
+    grid-template-rows: minmax(120px, auto) repeat(4, 100px); 
 }
