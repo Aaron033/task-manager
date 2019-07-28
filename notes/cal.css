@@ -31,5 +31,7 @@ text-align: center;
 .cal-grid > button{
 cursor: pointer ; 
 font-size: 2rem; 
-border: 1px solid 
+border: 1px solid #FFF;
+outline: none; 
+background-color: rgba(255, 255, 255, .75)
 }
