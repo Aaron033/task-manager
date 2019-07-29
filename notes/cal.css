@@ -58,6 +58,10 @@ background-color: rgba(255, 255, 255, .75)
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
+    padding: 10px;
+    /* We can to break a world in the middle of it*/
+    word-wrap: break-word;
+    
 
 }
 
