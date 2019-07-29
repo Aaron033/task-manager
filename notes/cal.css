@@ -20,7 +20,8 @@ text-align: center;
 .cal-grid{
     display: grid; 
     justify-content: center; 
-    align-items: center; 
+    /*we want to align the items close togheter */
+    align-content: center; 
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     /* 120px auto it will grow as it need to be to fix the number typed  */
@@ -34,4 +35,8 @@ font-size: 2rem;
 border: 1px solid #FFF;
 outline: none; 
 background-color: rgba(255, 255, 255, .75)
+}
+
+.cal-grid > button:hover{
+    background-color: rgba(255, 255, 255, .9)
 }
