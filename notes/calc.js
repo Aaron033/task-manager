@@ -1,1 +1,2 @@
-const numberButtons = document.querySelectorAll['data-number']; 
+const numberButtons = document.querySelectorAll('data-number'); 
+const operationButtons = document.querySelectorAll('[data-operation]')
