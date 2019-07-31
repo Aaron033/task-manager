@@ -40,4 +40,8 @@ const previousOperandTextElement = document.querySelector('[data-previous-operan
 const  currentOperandTextElement= document.querySelector('[data-current-operand]');
 
 
-const calculator = new Calculator()
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+numberButtons.forEach(button => {
+    
+})
