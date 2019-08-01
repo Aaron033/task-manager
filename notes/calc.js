@@ -28,7 +28,7 @@ this.currentOperand = this.currentOperand
 
     }
     updateDisplay(){
-
+this.currentOperandTextElement.innerText = this.currentOperand;
     }
 
 
