@@ -59,3 +59,12 @@ numberButtons.forEach(button => {
 
 })
 console.log("Hi")
+
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        /*This is how you get the value of the button "defined 'value'"*/
+        calculator.chooseOperation(button.innerText)
+        calculator.updateDisplay()
+    })
+
+})
