@@ -26,6 +26,12 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
     }
     chooseOperation(operation){
+
+    if(this.currentOperand === '') return 
+    if(this.previousOperand !== ''){
+        this.compute()
+    }
+
         //we are setting up the operation to the operation that we passed in
 this.operation = operation 
 
