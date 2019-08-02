@@ -50,7 +50,7 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 numberButtons.forEach(button => {
     button.addEventListener("click", () =>{
-        /*This is how you get the value of the button "name"*/
+        /*This is how you get the value of the button "defined 'value'"*/
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
     })
