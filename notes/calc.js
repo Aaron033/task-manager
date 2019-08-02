@@ -41,6 +41,13 @@ this.previousOperand = this.currentOperand
 this.currentOperand = ''
     }
     compute(){
+let computation 
+//We convert the string to number 
+const prev = parseFloat(this.previousOperand)
+const current = parseFloat(this.currentOperand)
+
+//If we dont have a previous value or current we are going to stop the execution here 
+if(isNaN(prev) || isNaN(current)) return 
 
     }
     updateDisplay(){
