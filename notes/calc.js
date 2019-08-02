@@ -26,7 +26,9 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
     }
     chooseOperation(operation){
-
+this.operation = operation 
+this.previousOperand = this.currentOperand
+this.currentOperand = ''
     }
     compute(){
 
@@ -58,7 +60,7 @@ numberButtons.forEach(button => {
     })
 
 })
-console.log("Hi")
+
 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
