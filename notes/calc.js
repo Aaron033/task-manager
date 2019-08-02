@@ -15,7 +15,7 @@ this.operation = undefined
     }
 
     delete(){
-this.currentOperand = this.currentOperand
+this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
     appendNumber(number){
@@ -28,7 +28,7 @@ this.currentOperand = number
 
     }
     updateDisplay(){
-this.currentOperandTextElement.innerText = this.currentOperand;
+    this.currentOperandTextElement.innerText = this.currentOperand;
     }
 
 
