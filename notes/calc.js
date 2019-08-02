@@ -36,7 +36,7 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
 }
 
-const numberButtons = document.querySelectorAll('data-number'); 
+const numberButtons = document.querySelectorAll('[data-number]'); 
 const operationButtons = document.querySelectorAll('[data-operation]'); 
 
 const equalsButton = document.querySelector('[data-equals]');
@@ -56,3 +56,4 @@ numberButtons.forEach(button => {
     })
 
 })
+console.log("Hi")
