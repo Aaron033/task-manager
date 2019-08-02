@@ -26,7 +26,9 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
     }
     chooseOperation(operation){
+        //we are setting up the operation to the operation that we passed in
 this.operation = operation 
+
 this.previousOperand = this.currentOperand
 this.currentOperand = ''
     }
@@ -35,6 +37,7 @@ this.currentOperand = ''
     }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.currentOperand
+   this.previousOperandTextElement.innerText = this.previousOperand
     }
 
 
