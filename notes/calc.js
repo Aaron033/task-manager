@@ -20,6 +20,7 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
     appendNumber(number){
         //This code checks that only one period is allowed in the typing 
+        //If we are trying to add a peroid when a period has been added it won't do anything
     if(number === '.' && this.currentOperand.includes('.')) return 
     this.currentOperand = this.currentOperand.toString() + number.toString()
 
