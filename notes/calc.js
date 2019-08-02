@@ -19,8 +19,8 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
     appendNumber(number){
-if(number === '.' && this.currentOperand.includes('.')) return 
-this.currentOperand = this.currentOperand.toString() + number.toString()
+    if(number === '.' && this.currentOperand.includes('.')) return 
+    this.currentOperand = this.currentOperand.toString() + number.toString()
 
     }
     chooseOperation(operation){
