@@ -19,9 +19,10 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
     appendNumber(number){
-    // if(number === '.' && this.currentOperand.includes('.')) return 
-    // this.currentOperand = this.currentOperand.toString() + number.toString()
-this.currentOperand = number 
+        //This code checks that only one period is allowed in the typing 
+    if(number === '.' && this.currentOperand.includes('.')) return 
+    this.currentOperand = this.currentOperand.toString() + number.toString()
+
     }
     chooseOperation(operation){
 
@@ -49,7 +50,7 @@ const currentOperandTextElement= document.querySelector('[data-current-operand]'
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 numberButtons.forEach(button => {
-    button.addEventListener("click", () =>{
+    button.addEventListener('click', () => {
         /*This is how you get the value of the button "defined 'value'"*/
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
