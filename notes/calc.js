@@ -40,6 +40,7 @@ this.previousOperand = this.currentOperand
 //This code will clear the previous(current) operand 
 this.currentOperand = ''
     }
+
     compute(){
 let computation 
 //We convert the string to number 
@@ -49,6 +50,21 @@ const current = parseFloat(this.currentOperand)
 //If we dont have a previous value or current we are going to stop the execution here 
 if(isNaN(prev) || isNaN(current)) return 
 
+switch(this.operation){
+    case '+': 
+    computation = prev + current
+    break 
+    case '-': 
+    computation = prev + current
+    break 
+    case '*': 
+    computation = prev + current
+    break 
+    case '÷': 
+    computation = prev + current
+    break 
+
+}
     }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.currentOperand
