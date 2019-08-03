@@ -66,8 +66,11 @@ switch(this.operation){
     //If none of the case work 
     default: 
     return 
-
 }
+this.currentOperand = computation 
+this.operation = undefined 
+this.previousOperand = ''
+
     }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.currentOperand
