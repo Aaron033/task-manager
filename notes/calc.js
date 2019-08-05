@@ -1,4 +1,5 @@
 class Calculator{
+    // All the new istances will get the structure 
     constructor( previousOperandTextElement, currentOperandTextElement){
 
         this.previousOperandTextElement = previousOperandTextElement 
