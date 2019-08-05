@@ -76,7 +76,7 @@ this.previousOperand = ''
     }
 
     getDisplayNumber(number) {
-        
+        return number 
     }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.currentOperand
