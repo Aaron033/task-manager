@@ -16,6 +16,7 @@ this.operation = undefined
     }
 
     delete(){
+        //This code will delete a character by character 
 this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
