@@ -74,6 +74,10 @@ this.operation = undefined
 this.previousOperand = ''
 
     }
+
+    getDisplayNumber(number) {
+        
+    }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.currentOperand
    //this.previousOperandTextElement.innerText = this.previousOperand
