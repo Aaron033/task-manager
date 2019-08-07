@@ -76,6 +76,7 @@ this.previousOperand = ''
     }
 
     getDisplayNumber(number) {
+        //we will add a comma here 
         return number 
     }
     updateDisplay(){
