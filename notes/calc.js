@@ -79,7 +79,7 @@ this.previousOperand = ''
         return number 
     }
     updateDisplay(){
-   this.currentOperandTextElement.innerText = this.currentOperand
+   this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
    //this.previousOperandTextElement.innerText = this.previousOperand
    if(this.operation != null) {
        //Making a concatination 
