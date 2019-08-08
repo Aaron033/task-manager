@@ -29,7 +29,7 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
 
     }
     chooseOperation(operation){
-
+// if there is not current operand the acction won't be complited 
     if(this.currentOperand === '') return 
     if(this.previousOperand !== ''){
         this.compute()
