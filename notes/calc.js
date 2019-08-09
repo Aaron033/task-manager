@@ -31,7 +31,7 @@ this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
     chooseOperation(operation){
 // if there is not current operand the acction won't be complited 
-    if(this.currentOperand === '') return 
+    if(this.currentOperand === '') return // if there is no operand the code wont do anything 
     if(this.previousOperand !== ''){
         this.compute()
     }
@@ -41,7 +41,7 @@ this.operation = operation
 
 this.previousOperand = this.currentOperand
 //This code will clear the previous(current) operand 
-this.currentOperand = ''
+this.currentOperand = '' // this will clear the operand in order to type the next number ( cosmetic reason; so it wont look like +4400 )
     }
 
     compute(){
