@@ -50,8 +50,8 @@ let computation
 const prev = parseFloat(this.previousOperand)
 const current = parseFloat(this.currentOperand)
 
-//If we dont have a previous value or current we are going to stop the execution here 
-if(isNaN(prev) || isNaN(current)) return 
+
+if(isNaN(prev) || isNaN(current)) return //If we dont have a previous value or current we are going to stop the execution here 
 
 switch(this.operation){
     case '+': 
@@ -72,7 +72,7 @@ switch(this.operation){
 }
 this.currentOperand = computation 
 this.operation = undefined 
-this.previousOperand = ''
+this.previousOperand = '' //we clear the previous operand once we had computed the operation 
 
     }
 
@@ -82,7 +82,7 @@ this.previousOperand = ''
     }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
-   //this.previousOperandTextElement.innerText = this.previousOperand
+
    if(this.operation != null) {
        //Making a concatination // it is going to have an operation appendet to the last number 
        this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
