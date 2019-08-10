@@ -83,7 +83,7 @@ this.previousOperand = '' //we clear the previous operand once we had computed t
         const floatNumber = parseFloat(number) 
 
         if(isNaN(floatNumber)) return ''
-        return number.toLocaleString('en')
+        return floatNumber.toLocaleString('en')
     }
     updateDisplay(){
    this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
