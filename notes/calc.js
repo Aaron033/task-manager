@@ -84,7 +84,7 @@ this.previousOperand = '' //we clear the previous operand once we had computed t
    this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
 
    if(this.operation != null) {
-       //Making a concatination // it is going to have an operation appendet to the last number 
+       //Making a concatination // it is going to have an operation appended to the last number 
        this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
    }
     }
