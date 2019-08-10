@@ -77,8 +77,10 @@ this.previousOperand = '' //we clear the previous operand once we had computed t
     }
 
     getDisplayNumber(number) {
-
         //we will add a comma here
+
+        // we don't if will be working with decimals or integers 
+        const stringNumber = number.toString()
         //The number is a string so we will converted to a actual number(int)
         const floatNumber = parseFloat(number) 
 
